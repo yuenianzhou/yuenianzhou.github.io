@@ -83,6 +83,16 @@
     .img-responsive{max-width:100%;height:auto;display:block;margin:0 auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
     .figure{margin:0}
     .figure-caption{text-align:center;margin-top:8px;font-style:italic;opacity:.9}
+    /* only for the Beethoven snippet */
+.figure--narrow { text-align:center; }
+.img-es{
+  width: min(680px, 100%);   /* 最大 680px，移动端不超过屏宽 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
   </style>
 </head>
 <body>
@@ -126,15 +136,15 @@
       <p><strong>Office:</strong> M 005</p>
     </section>
 
-    <!-- Beethoven snippet with German caption -->
-    <section class="card">
-      <figure class="figure">
-        <!-- 你的文件名是 assets/esmuss.jpg → 用这个路径 -->
-        <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt." class="img-responsive" loading="lazy">
-        <figcaption class="figure-caption">„Es muss sein.“</figcaption>
-        <!-- 如需历史拼写可用 „Es muß sein.“ -->
-      </figure>
-    </section>
+  <section class="card">
+  <figure class="figure figure--narrow">
+    <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
+      <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
+           class="img-es" loading="lazy">
+    </a>
+    <figcaption class="figure-caption">„Es muss sein.“</figcaption>
+  </figure>
+</section>
 
     <footer>
       Last updated: <span id="updated"></span>
