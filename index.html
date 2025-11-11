@@ -7,7 +7,6 @@
   <title>Yuenian Zhou – Math PhD, Universität Regensburg</title>
   <meta name="author" content="Yuenian Zhou" />
   <meta name="description" content="Official homepage of Yuenian Zhou, Math PhD at Universität Regensburg (SFB 1085 Higher Invariants). Algebraic geometry, number theory, ℓ-adic local systems." />
-  <!-- 如果你的站点在项目页，canonical 建议用下面这个： -->
   <link rel="canonical" href="https://yuenianzhou.github.io/personal-website/" />
 
   <!-- Open Graph -->
@@ -55,16 +54,21 @@
     }
     .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
     header{background:#fff;border-bottom:1px solid var(--border)}
-    h1{margin:.1rem 0 .5rem;font-size:1.75rem;font-weight:600;letter-spacing:.2px}
+    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px} /* smaller */
     .meta{color:#111}
+
+    /* links */
     a{color:#111;text-decoration:underline;text-underline-offset:2px}
     a:hover{text-decoration:underline}
+
     nav a{margin-right:18px}
+
+    /* section titles */
     h2.section-title{
       font-family:"Dancing Script", cursive;
-      font-size:40px;
+      font-size:32px;  /* smaller */
       font-weight:700;
-      margin:10px 0 8px;
+      margin:8px 0 6px;
       color:#111;
     }
     .card{
@@ -79,20 +83,18 @@
     li{margin:.25rem 0}
     footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
 
-    /* image styles */
-    .img-responsive{max-width:100%;height:auto;display:block;margin:0 auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+    /* Beethoven image sizing */
+    .figure--narrow{ text-align:center; }
+    .img-es{
+      width: min(680px, 100%);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
     .figure{margin:0}
-    .figure-caption{text-align:center;margin-top:8px;font-style:italic;opacity:.9}
-    /* only for the Beethoven snippet */
-.figure--narrow { text-align:center; }
-.img-es{
-  width: min(680px, 100%);   /* 最大 680px，移动端不超过屏宽 */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.12);
-}
+    .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
   </style>
 </head>
 <body>
@@ -136,15 +138,19 @@
       <p><strong>Office:</strong> M 005</p>
     </section>
 
-  <section class="card">
-  <figure class="figure figure--narrow">
-    <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
-      <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
-           class="img-es" loading="lazy">
-    </a>
-    <figcaption class="figure-caption">„Es muss sein.“</figcaption>
-  </figure>
-</section>
+
+
+    <!-- Beethoven image with caption -->
+    <section class="card">
+      <figure class="figure figure--narrow">
+        <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
+          <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
+               class="img-es" loading="lazy">
+        </a>
+        <figcaption class="figure-caption">„Es muss sein.“</figcaption>
+        <!-- Historical spelling: „Es muß sein.“ -->
+      </figure>
+    </section>
 
     <footer>
       Last updated: <span id="updated"></span>
@@ -156,5 +162,6 @@
   </script>
 </body>
 </html>
+
 
 
