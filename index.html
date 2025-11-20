@@ -6,7 +6,7 @@
 
   <title>Yuenian Zhou – Math PhD Candidate, Universität Regensburg</title>
   <meta name="author" content="Yuenian Zhou" />
-  <meta name="description" content="Official homepage of Yuenian Zhou, Math PhD at Universität Regensburg (SFB 1085 Higher Invariants). Algebraic geometry, number theory, ℓ-adic local systems." />
+  <meta name="description" content="Official homepage of Yuenian Zhou, Math PhD Candidate at Universität Regensburg (SFB 1085 Higher Invariants). Algebraic geometry, number theory, ℓ-adic local systems." />
   <link rel="canonical" href="https://yuenianzhou.github.io/personal-website/" />
 
   <!-- Open Graph -->
@@ -17,7 +17,8 @@
   <meta property="profile:first_name" content="Yuenian" />
   <meta property="profile:last_name" content="Zhou" />
 
-  <!-- Fonts -->
+  
+<!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Structured data -->
@@ -83,6 +84,28 @@
     li{margin:.25rem 0}
     footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
 
+    /* About me: text + right-side photo */
+    .about-grid{
+      display:grid;
+      grid-template-columns: minmax(0,1fr) 240px; /* 左文本自适应，右图列固定宽度 */
+      gap:16px 24px;
+      align-items:start;
+    }
+    .about-photo{ margin:0; text-align:center; }
+    .about-photo .img-about{
+      width: 220px;   /* 你要求的宽度 */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      display:block; margin:0 auto;
+    }
+    @media (max-width: 760px){
+      .about-grid{
+        grid-template-columns: 1fr;   /* 手机端上下排 */
+      }
+      .about-photo{ margin-top:4px; }
+    }
+
     /* Beethoven image sizing (kept) */
     .figure--narrow{ text-align:center; }
     .img-es{
@@ -95,17 +118,6 @@
     }
     .figure{margin:0}
     .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
-
-    /* NEW: top hero picture (220px) */
-    .hero-figure{ text-align:center; margin:0; }
-    .img-hero{
-      width: min(220px, 100%);
-      height:auto;
-      display:block;
-      margin:0 auto;
-      border-radius:12px;
-      box-shadow:0 10px 30px rgba(0,0,0,.12);
-    }
   </style>
 </head>
 <body>
@@ -123,39 +135,43 @@
   </nav>
 
   <main class="wrap">
-    <!-- NEW: put picture.jpg at the very beginning -->
-    <section class="card">
-      <figure class="hero-figure">
-        <a href="assets/picture.jpg" target="_blank" rel="noopener">
-          <img src="assets/picture.jpg" alt="Picture" class="img-hero" loading="lazy">
-        </a>
-      </figure>
-    </section>
-
     <section class="card">
       <h2 class="section-title">About me</h2>
-      <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
-        <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “higher invariants”</a>
-        at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
-        <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
-      </p>
-      <p>
-        Previously, I completed my master’s studies at the
-        <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
-        (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
-        <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
-      </p>
-      <p>
-        My research interests are algebraic geometry and number theory (with a geometric flavor), especially
-        ℓ-adic local systems, ℓ-independence, the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
-      </p>
-      <p>
-        Currently, I’m focusing on local systems over mixed-characteristic local fields, in particular the arithmetic
-        properties of local systems over deformations of stable curves in the Deligne–Mumford stack.
-      </p>
 
-      <p><strong>Email:</strong> <a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></p>
-      <p><strong>Office:</strong> M 005</p>
+      <div class="about-grid">
+        <!-- 左列：正文 -->
+        <div>
+          <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
+            <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “higher invariants”</a>
+            at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
+            <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
+          </p>
+          <p>
+            Previously, I completed my master’s studies at the
+            <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
+            (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
+            <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
+          </p>
+          <p>
+            My research interests are algebraic geometry and number theory (with a geometric flavor), especially
+            ℓ-adic local systems, ℓ-independence, the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
+          </p>
+          <p>
+            Currently, I’m focusing on local systems over mixed-characteristic local fields, in particular the arithmetic
+            properties of local systems over deformations of stable curves in the Deligne–Mumford stack.
+          </p>
+
+          <p><strong>Email:</strong> <a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></p>
+          <p><strong>Office:</strong> M 005</p>
+        </div>
+
+        <!-- 右列：照片（assets/picture.jpg） -->
+        <figure class="about-photo">
+          <a href="assets/picture.jpg" target="_blank" rel="noopener">
+            <img src="assets/picture.jpg" alt="Portrait" class="img-about" loading="lazy">
+          </a>
+        </figure>
+      </div>
     </section>
 
     <!-- Beethoven image with caption -->
@@ -180,4 +196,5 @@
 </body>
 </html>
 
+  
 
