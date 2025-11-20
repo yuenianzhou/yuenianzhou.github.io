@@ -83,19 +83,20 @@
     li{margin:.25rem 0}
     footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
 
-/* Beethoven image sizing */
-.figure--narrow{ text-align:center; }
-.img-es{
-  width: min(220px, 100%);   /* ← 原来 680px，想更小就再减：480/420 */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.12);
-}
-.figure{margin:0}
-.figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
-
+    /* 220px gallery thumbnails */
+    .gallery-220{
+      display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
+    }
+    .gallery-220 figure{
+      width:220px; margin:0; text-align:center;
+    }
+    .img-220{
+      width:220px; height:auto; display:block; margin:0 auto;
+      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+    .caption{
+      margin-top:6px; font-style:italic; opacity:.9; font-size:.95rem;
+    }
   </style>
 </head>
 <body>
@@ -139,28 +140,48 @@
       <p><strong>Office:</strong> M 005</p>
     </section>
 
-
-
-
-   
-    <!-- Beethoven image with caption -->
+    <!-- 220px gallery with three images -->
     <section class="card">
-      <figure class="figure figure--narrow">
-        <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
-          <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
-               class="img-es" loading="lazy">
-        </a>
-        <figcaption class="figure-caption">„Es muss sein.“</figcaption>
-        <!-- Historical spelling: „Es muß sein.“ -->
-      </figure>
+      <div class="gallery-220">
+        <figure>
+          <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
+            <img src="assets/esmuss.jpg"
+                 alt="Es muss sein (Beethoven), music excerpt."
+                 class="img-220" loading="lazy">
+          </a>
+          <figcaption class="caption">„Es muss sein.“</figcaption>
+        </figure>
+
+        <figure>
+          <a href="assets/AT58grothendieck,atiyah.jpg" target="_blank" rel="noopener">
+            <img src="assets/AT58grothendieck,atiyah.jpg"
+                 alt="AT58 — Grothendieck and Atiyah"
+                 class="img-220" loading="lazy">
+          </a>
+          <figcaption class="caption">AT58 — Grothendieck &amp; Atiyah</figcaption>
+        </figure>
+
+        <figure>
+          <!-- 你上传在仓库根目录的文件名（如放入 assets/，就把两处路径都改成 assets/df4c9f5f075318adea761800c08fecd4.jpg） -->
+          <a href="df4c9f5f075318adea761800c08fecd4.jpg" target="_blank" rel="noopener">
+            <img src="df4c9f5f075318adea761800c08fecd4.jpg"
+                 alt="Uploaded image"
+                 class="img-220" loading="lazy">
+          </a>
+          <figcaption class="caption">Image</figcaption>
+        </figure>
+      </div>
     </section>
 
     <footer>
       Last updated: <span id="updated"></span>
     </footer>
   </main>
+
+  <script>
+    document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
+  </script>
 </body>
 </html>
-
 
 
