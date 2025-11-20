@@ -54,7 +54,7 @@
     }
     .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
     header{background:#fff;border-bottom:1px solid var(--border)}
-    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px} /* smaller */
+    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px}
     .meta{color:#111}
 
     /* links */
@@ -66,7 +66,7 @@
     /* section titles */
     h2.section-title{
       font-family:"Dancing Script", cursive;
-      font-size:32px;  /* smaller */
+      font-size:32px;
       font-weight:700;
       margin:8px 0 6px;
       color:#111;
@@ -83,19 +83,28 @@
     li{margin:.25rem 0}
     footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
 
-    /* 220px gallery thumbnails */
-    .gallery-220{
-      display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
+    /* Beethoven image sizing (kept) */
+    .figure--narrow{ text-align:center; }
+    .img-es{
+      width: min(220px, 100%);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
     }
-    .gallery-220 figure{
-      width:220px; margin:0; text-align:center;
-    }
-    .img-220{
-      width:220px; height:auto; display:block; margin:0 auto;
-      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.12);
-    }
-    .caption{
-      margin-top:6px; font-style:italic; opacity:.9; font-size:.95rem;
+    .figure{margin:0}
+    .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
+
+    /* NEW: top hero picture (220px) */
+    .hero-figure{ text-align:center; margin:0; }
+    .img-hero{
+      width: min(220px, 100%);
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
     }
   </style>
 </head>
@@ -114,6 +123,15 @@
   </nav>
 
   <main class="wrap">
+    <!-- NEW: put picture.jpg at the very beginning -->
+    <section class="card">
+      <figure class="hero-figure">
+        <a href="picture.jpg" target="_blank" rel="noopener">
+          <img src="picture.jpg" alt="Picture" class="img-hero" loading="lazy">
+        </a>
+      </figure>
+    </section>
+
     <section class="card">
       <h2 class="section-title">About me</h2>
       <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
@@ -140,37 +158,15 @@
       <p><strong>Office:</strong> M 005</p>
     </section>
 
-    <!-- 220px gallery with three images -->
+    <!-- Beethoven image with caption -->
     <section class="card">
-      <div class="gallery-220">
-        <figure>
-          <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
-            <img src="assets/esmuss.jpg"
-                 alt="Es muss sein (Beethoven), music excerpt."
-                 class="img-220" loading="lazy">
-          </a>
-          <figcaption class="caption">„Es muss sein.“</figcaption>
-        </figure>
-
-        <figure>
-          <a href="assets/AT58grothendieck,atiyah.jpg" target="_blank" rel="noopener">
-            <img src="assets/AT58grothendieck,atiyah.jpg"
-                 alt="AT58 — Grothendieck and Atiyah"
-                 class="img-220" loading="lazy">
-          </a>
-          <figcaption class="caption">AT58 — Grothendieck &amp; Atiyah</figcaption>
-        </figure>
-
-        <figure>
-          <!-- 你上传在仓库根目录的文件名（如放入 assets/，就把两处路径都改成 assets/df4c9f5f075318adea761800c08fecd4.jpg） -->
-          <a href="df4c9f5f075318adea761800c08fecd4.jpg" target="_blank" rel="noopener">
-            <img src="df4c9f5f075318adea761800c08fecd4.jpg"
-                 alt="Uploaded image"
-                 class="img-220" loading="lazy">
-          </a>
-          <figcaption class="caption">Image</figcaption>
-        </figure>
-      </div>
+      <figure class="figure figure--narrow">
+        <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
+          <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
+               class="img-es" loading="lazy">
+        </a>
+        <figcaption class="figure-caption">„Es muss sein.“</figcaption>
+      </figure>
     </section>
 
     <footer>
