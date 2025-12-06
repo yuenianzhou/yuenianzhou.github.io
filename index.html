@@ -17,8 +17,8 @@
   <meta property="profile:first_name" content="Yuenian" />
   <meta property="profile:last_name" content="Zhou" />
 
-  <!-- Fonts: Special Elite (site-wide) + Dancing Script (section titles) -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts: Special Elite (site-wide and headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -55,7 +55,15 @@
     }
     .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
     header{background:#fff;border-bottom:1px solid var(--border)}
-    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:400;letter-spacing:.3px}
+
+    /* 标题也用 Special Elite，大小保持原先设置 */
+    h1{
+      font-family:"Special Elite", Georgia, "Times New Roman", serif;
+      margin:.1rem 0 .5rem;
+      font-size:1.5rem;   /* 保持原大小 */
+      font-weight:400;
+      letter-spacing:.3px;
+    }
     .meta{color:#111}
 
     /* nav + links（黑色下划线） */
@@ -63,13 +71,14 @@
     a{color:#111;text-decoration:underline;text-underline-offset:2px}
     a:hover{text-decoration:underline}
 
-    /* 小节标题用手写体 */
+    /* 小节标题（也改为 Special Elite，保持原 32px） */
     h2.section-title{
-      font-family:"Dancing Script", cursive;
-      font-size:32px;
-      font-weight:700;
+      font-family:"Special Elite", Georgia, "Times New Roman", serif;
+      font-size:32px;     /* 保持原大小 */
+      font-weight:400;
       margin:8px 0 6px;
       color:#111;
+      letter-spacing:.2px;
     }
     .card{
       background:var(--card-bg);
