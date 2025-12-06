@@ -6,17 +6,18 @@
 
   <title>CV – Yuenian Zhou</title>
   <meta name="author" content="Yuenian Zhou" />
-  <meta name="description" content="Curriculum Vitae of Yuenian Zhou — Math PhD at Universität Regensburg (SFB 1085 Higher Invariants). Algebraic geometry, number theory, ℓ-adic local systems." />
+  <meta name="description" content="Curriculum Vitae of Yuenian Zhou — Math PhD Candidate at Universität Regensburg (SFB 1085 Higher Invariants). Algebraic geometry, number theory, ℓ-adic local systems." />
   <link rel="canonical" href="https://yuenianzhou.github.io/personal-website/cv.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CV – Yuenian Zhou" />
   <meta property="og:site_name" content="Yuenian Zhou" />
-  <meta property="og:url" content="https://yuenianzhou.github.io/cv.html" />
+  <meta property="og:url" content="https://yuenianzhou.github.io/personal-website/cv.html" />
 
-  <!-- Fonts (keep consistent with homepage) -->
+  <!-- Fonts: keep original + add medieval set -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
   <style>
     :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
@@ -24,16 +25,97 @@
     body{ margin:0; font-family:"Lora", Georgia, "Times New Roman", serif; font-size:16.5px; line-height:1.9; color:var(--ink); background:#fafafa; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:26px 28px; }
     header{ background:#fff; border-bottom:1px solid var(--border); }
-    h1{ margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:600; letter-spacing:.2px; } /* smaller */
+    h1{ margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:600; letter-spacing:.2px; }
     nav a{ margin-right:18px }
     a{ color:#111; text-decoration:underline; text-underline-offset:2px }
     a:hover{ text-decoration:underline }
     .card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04); }
-    h2{ font-family:"Dancing Script", cursive; font-size:32px; font-weight:700; margin:8px 0 6px; color:#111; } /* smaller */
+    h2{ font-family:"Dancing Script", cursive; font-size:32px; font-weight:700; margin:8px 0 6px; color:#111; }
     ul{ padding-left:1.1rem; margin:.25rem 0 }
     li{ margin:.25rem 0 }
     .two-col{ display:grid; grid-template-columns: 200px 1fr; gap:10px 18px; }
     .meta{ color:#111 }
+  </style>
+
+  <!-- ===== Medieval / Vintage THEME overrides (same as homepage) ===== -->
+  <style>
+    /* Parchment background */
+    body{
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(160,130,90,.08), transparent 60%),
+        radial-gradient(1000px 600px at 80% 90%, rgba(120,100,70,.06), transparent 60%),
+        #f8f2e4;
+      color:#2a1d12;
+      font-family: "EB Garamond","Lora", Georgia, "Times New Roman", serif;
+    }
+    header{
+      background: transparent;
+      border: 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid rgba(120,90,50,.25);
+    }
+
+    /* Gothic heading with ornament */
+    h1{
+      font-family: "UnifrakturMaguntia", "EB Garamond", serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #2b1e0f;
+      letter-spacing:.5px;
+      text-shadow: 0 1px 0 #fff6;
+      margin-bottom: .6rem;
+      position: relative;
+    }
+    h1::after{
+      content:"✦";
+      display:block;
+      color:#a6792e;
+      opacity:.85;
+      margin-top:.35rem;
+      padding-bottom:.25rem;
+      border-bottom:1px solid rgba(120,90,50,.35);
+      width:100%;
+      text-align:center;
+    }
+
+    /* Cards on parchment */
+    .card{
+      background: rgba(255,255,245,.88);
+      border: 1px solid rgba(150,120,80,.35);
+      box-shadow: 0 8px 20px rgba(80,60,40,.12), inset 0 1px 0 #fff6;
+      border-radius: 12px;
+    }
+
+    /* Section titles gothic */
+    h2{
+      font-family: "UnifrakturMaguntia","EB Garamond",serif;
+      font-size: 28px;
+      color:#2b1e0f;
+      margin:6px 0 4px;
+      text-shadow: 0 1px 0 #fff6;
+    }
+
+    /* Vintage links */
+    a{
+      color:#5a3b1c;
+      text-decoration: underline;
+      text-decoration-color: rgba(124,84,33,.7);
+      text-underline-offset: 3px;
+    }
+    a:hover{ color:#7a4d24; text-decoration-thickness: 2px; }
+
+    /* List bullets as ✶ */
+    .card ul{ list-style: none; padding-left:1.2rem; }
+    .card ul li{ position: relative; }
+    .card ul li::before{
+      content:"✶";
+      position:absolute; left:-1.2rem; top:.1rem;
+      color:#8c6a2d; font-size:.95rem;
+    }
+
+    /* Two-column table look */
+    .two-col{ column-gap: 22px; }
+    .two-col > div:first-child{ color:#3b2713; font-weight:600; }
   </style>
 </head>
 <body>
@@ -51,20 +133,19 @@
   <main class="wrap">
     <section class="card">
       <h2>Contact</h2>
-     <div class="two-col">
-  <div><strong>Email</strong></div>
-  <div><a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></div>
+      <div class="two-col">
+        <div><strong>Email</strong></div>
+        <div><a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></div>
 
+        <div><strong>Affiliation</strong></div>
+        <div>Universität Regensburg · SFB 1085 “Higher Invariants” (associated member)</div>
 
-  <div><strong>Affiliation</strong></div>
-  <div>Universität Regensburg · SFB 1085 “Higher Invariants” (associated member)</div>
+        <div><strong>Advisor</strong></div>
+        <div>Prof. Moritz Kerz</div>
 
-  <div><strong>Advisor</strong></div>
-  <div>Prof. Moritz Kerz</div>
-
-  <div><strong>Office</strong></div>
-  <div>M 005</div>
-</div>
+        <div><strong>Office</strong></div>
+        <div>M 005</div>
+      </div>
     </section>
 
     <section class="card">
@@ -72,7 +153,7 @@
       <ul>
         <li><strong>Ph.D. in Mathematics</strong>, Universität Regensburg, <em>2024–present</em>. Associated member of SFB 1085 “Higher Invariants”. Advisor: Prof. Moritz Kerz.</li>
         <li><strong>M2 (AAG: Analysis, Arithmetic, Geometry)</strong>, Université Paris-Saclay (Paris-Sud), <em>2023</em>.</li>
-        <li><strong>B.Sc. in Mathematics</strong>, Zhejiang University,<em>2022</em>, China.</li>
+        <li><strong>B.Sc. in Mathematics</strong>, Zhejiang University, <em>2022</em>, China.</li>
       </ul>
     </section>
 
@@ -83,64 +164,53 @@
         <li>Non-abelian Hodge theory; Simpson’s motivicity conjecture.</li>
       </ul>
     </section>
-<section class="card">
-  <h2>Conferences & Schools</h2>
-  <ul>
-    <li><em>CAVARET 2: “Curves, Abelian VArieties and RElated Topics”</em>, Jul 13–17, 2026, Barcelona.</li>
-    <li><em>New developments in p-adic representation theory</em>, Mar 18–20, 2026, Essen.</li>
-    <li><em>60th Birthday Conference for Alexander Schmid</em>, Mar 9–13, 2026, Heidelberg.</li>
 
-    <li><em>Higher Invariants: interactions between arithmetic geometry and global analysis</em>, Oct 6–10, 2025, Regensburg.</li>
-    <li><em>Motives, L-values and Eisenstein series (Guido Kings 60th)</em>, Sep 22–26, 2025, Regensburg.</li>
-    <li><em>Summer School on Hodge Modules and D-modules</em>, Aug 3–8, 2025, Shanghai.</li>
-    <li><em>Étale Cohomology and Étale Homotopy</em>, Jun 16–20, 2025, Frankfurt.</li>
+    <section class="card">
+      <h2>Conferences &amp; Schools</h2>
+      <ul>
+        <li><em>CAVARET 2: “Curves, Abelian VArieties and RElated Topics”</em>, Jul 13–17, 2026, Barcelona.</li>
+        <li><em>New developments in p-adic representation theory</em>, Mar 18–20, 2026, Essen.</li>
+        <li><em>60th Birthday Conference for Alexander Schmid</em>, Mar 9–13, 2026, Heidelberg.</li>
 
-    <li><em>School on Hodge Theory and Shimura Varieties</em>, Sep 23–27, 2024, Essen.</li>
-    <li><em>ENTR Workshop 24</em>, Sep 18–20, 2024, Essen.</li>
-    <li><em>IHES: A Conference in Honor of Hélène Esnault (70th)</em>, 2024, Paris.</li>
-    <li><em>Nearby Cycles and Derived Geometry</em>, 2024, Regensburg.</li>
+        <li><em>Higher Invariants: interactions between arithmetic geometry and global analysis</em>, Oct 6–10, 2025, Regensburg.</li>
+        <li><em>Motives, L-values and Eisenstein series (Guido Kings 60th)</em>, Sep 22–26, 2025, Regensburg.</li>
+        <li><em>Summer School on Hodge Modules and D-modules</em>, Aug 3–8, 2025, Shanghai.</li>
+        <li><em>Étale Cohomology and Étale Homotopy</em>, Jun 16–20, 2025, Frankfurt.</li>
 
-    <li><em>IHES Summer School — Recent Advances in Algebraic K-theory</em>, 2023, Paris.</li>
-    <li><em>Xi’an Jiaotong University Summer School of Number Theory</em>, 2021, Xi’an.</li>
-  </ul>
-</section>
+        <li><em>School on Hodge Theory and Shimura Varieties</em>, Sep 23–27, 2024, Essen.</li>
+        <li><em>ENTR Workshop 24</em>, Sep 18–20, 2024, Essen.</li>
+        <li><em>IHES: A Conference in Honor of Hélène Esnault (70th)</em>, 2024, Paris.</li>
+        <li><em>Nearby Cycles and Derived Geometry</em>, 2024, Regensburg.</li>
 
-   
-
-  <section class="card">
-  <h2>Preprints & Notes</h2>
-  <ul>
-    <li>In preparation — A weak companion of local systems over local field.</li>
-
-    <li>
-     Master’s thesis (M2, Université Paris-Saclay, 2023) —
-      <a href="assets/YuenianZhou_MSc_Thesis_2023.pdf" target="_blank" rel="noopener">PDF</a>
-    </li>
-
-    <li>
-    Mémoire de cours 2024 (Prof. F. Loeser):
-      <em>Sur le théorème de Langton et ses généralisations</em> —
-      <a href="assets/Memoire_de_cours_2024.pdf" target="_blank" rel="noopener">PDF</a>
-    </li>
-
-    <li>
-     Notes on Artin's Theorem on Elementary Fibrations in SGA 4 —
-      <a href="assets/Elementary_Fibrations.pdf" target="_blank" rel="noopener">PDF</a>
-    </li>
-  </ul>
-</section>
-
-     
-
+        <li><em>IHES Summer School — Recent Advances in Algebraic K-theory</em>, 2023, Paris.</li>
+        <li><em>Xi’an Jiaotong University Summer School of Number Theory</em>, 2021, Xi’an.</li>
+      </ul>
     </section>
-    
-<section class="card">
-  <h2>Teaching (Lehre)</h2>
-  <ul>
-    <li><strong>Lehre Sommersemester 25</strong>: <em>Arithmetik von quadratischen Formen</em>, Mo 16–18, M 101 (Carolyn Echter, Yuenian Zhou)</li>
-    <li><strong>Lehre Wintersemester 25/26</strong>: <em>Seminar Galois theory in algebra and topology</em>, Di 16–18, M (Andrea Panontin, Yuenian Zhou)</li>
-  </ul>
-</section>
+
+    <section class="card">
+      <h2>Preprints &amp; Notes</h2>
+      <ul>
+        <li>In preparation — A weak companion of local systems over local field.</li>
+        <li>Master’s thesis (M2, Université Paris-Saclay, 2023) —
+          <a href="assets/YuenianZhou_MSc_Thesis_2023.pdf" target="_blank" rel="noopener">PDF</a>
+        </li>
+        <li>Mémoire de cours 2024 (Prof. F. Loeser):
+          <em>Sur le théorème de Langton et ses généralisations</em> —
+          <a href="assets/Memoire_de_cours_2024.pdf" target="_blank" rel="noopener">PDF</a>
+        </li>
+        <li>Notes on Artin's Theorem on Elementary Fibrations in SGA 4 —
+          <a href="assets/Elementary_Fibrations.pdf" target="_blank" rel="noopener">PDF</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Teaching (Lehre)</h2>
+      <ul>
+        <li><strong>Lehre Sommersemester 25</strong>: <em>Arithmetik von quadratischen Formen</em>, Mo 16–18, M 101 (Carolyn Echter, Yuenian Zhou)</li>
+        <li><strong>Lehre Wintersemester 25/26</strong>: <em>Seminar Galois theory in algebra and topology</em>, Di 16–18, M (Andrea Panontin, Yuenian Zhou)</li>
+      </ul>
+    </section>
 
     <section class="card">
       <h2>Languages</h2>
@@ -154,3 +224,4 @@
   </main>
 </body>
 </html>
+
