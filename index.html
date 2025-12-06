@@ -17,9 +17,7 @@
   <meta property="profile:first_name" content="Yuenian" />
   <meta property="profile:last_name" content="Zhou" />
 
-  <!-- 原先字体（保留作后备） -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- 新增：中世纪复古风字体 -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
   <!-- Structured data -->
@@ -41,109 +39,59 @@
   <style>
     :root{
       --max: 1280px;
-      --ink: #111;
-      --border: #e5e7eb;
-      --card-bg: #fff;
+      --ink: #2a1d12;
+      --paper: #f6edd7;
+      --border: rgba(150,120,80,.35);
+      --accent: #7a4d24;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:"Lora", Georgia, "Times New Roman", serif;
+      font-family:"EB Garamond", Georgia, "Times New Roman", serif;
       font-size:16.5px;
       line-height:1.9;
       color:var(--ink);
-      background:#fafafa;
-    }
-    .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
-    header{background:#fff;border-bottom:1px solid var(--border)}
-    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px}
-    .meta{color:#111}
 
-    a{color:#111;text-decoration:underline;text-underline-offset:2px}
-    a:hover{text-decoration:underline}
-    nav a{margin-right:18px}
-
-    h2.section-title{
-      font-family:"Dancing Script", cursive;
-      font-size:32px;
-      font-weight:700;
-      margin:8px 0 6px;
-      color:#111;
-    }
-    .card{
-      background:var(--card-bg);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:18px 20px;
-      margin-top:16px;
-      box-shadow:0 2px 6px rgba(0,0,0,.04);
-    }
-    ul{padding-left:1.1rem;margin:.3rem 0}
-    li{margin:.25rem 0}
-    footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
-
-    /* About me: text + right-side photo */
-    .about-grid{
-      display:grid;
-      grid-template-columns: minmax(0,1fr) 240px;
-      gap:16px 24px;
-      align-items:start;
-    }
-    .about-photo{ margin:0; text-align:center; }
-    .about-photo .img-about{
-      width: 220px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.12);
-      display:block; margin:0 auto;
-    }
-    @media (max-width: 760px){
-      .about-grid{ grid-template-columns: 1fr; }
-      .about-photo{ margin-top:4px; }
-    }
-
-    /* Beethoven image sizing */
-    .figure--narrow{ text-align:center; }
-    .img-es{
-      width: min(220px, 100%);
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.12);
-    }
-    .figure{margin:0}
-    .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
-  </style>
-
-  <!-- ===== Medieval / Vintage THEME overrides (仅样式覆盖，正文不变) ===== -->
-  <style>
-    /* 羊皮纸背景 + 轻微纹理 */
-    body{
+      /* 羊皮纸底色 + 手写体纹理(内嵌SVG，可平铺) */
       background:
-        radial-gradient(1200px 800px at 20% 10%, rgba(160,130,90,.08), transparent 60%),
-        radial-gradient(1000px 600px at 80% 90%, rgba(120,100,70,.06), transparent 60%),
-        #f8f2e4;
-      color:#2a1d12;
-      font-family: "EB Garamond","Lora", Georgia, "Times New Roman", serif;
+        /* 手写体纹理层：可平铺 */
+        url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360'>\
+<rect width='600' height='360' fill='none'/>\
+<g fill='%2370503a' fill-opacity='.12' font-family='EB Garamond,serif' font-size='18' font-style='italic'>\
+<text x='12' y='28'>Es muss sein — algebraic geometry and number theory</text>\
+<text x='24' y='68'>Grothendieck · SGA · EGA · Hodge · ℓ-adic · motives</text>\
+<text x='8'  y='108'>Stacks · fundamental groups · companions · monodromy</text>\
+<text x='36' y='148'>Simpson · Fontaine–Mazur · variations · nearby cycles</text>\
+<text x='18' y='188'>Regensburg · Paris-Saclay · Zhejiang · arithmetic</text>\
+<text x='28' y='228'>SFB 1085 higher invariants · deformations of curves</text>\
+<text x='10' y='268'>tame · étale · de Rham · Gauss–Manin · alteration</text>\
+<text x='32' y='308'>morphisms · schemes · stacks · motives · sheaves</text>\
+</g></svg>") repeat,
+        /* 光照感渐变 */
+        radial-gradient(1200px 800px at 20% 10%, rgba(160,130,90,.10), transparent 60%),
+        radial-gradient(1000px 600px at 80% 90%, rgba(120,100,70,.08), transparent 60%),
+        var(--paper);
+      background-size: 600px 360px, auto, auto, auto;
     }
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
+
     header{
       background: transparent;
       border: 0;
       padding-bottom: 6px;
-      border-bottom: 2px solid rgba(120,90,50,.25);
+      border-bottom: 2px solid var(--border);
     }
-
-    /* 哥特标题 + 装饰分隔 */
     h1{
-      font-family: "UnifrakturMaguntia", "EB Garamond", serif;
-      font-size: 2.4rem;
-      font-weight: 400;
-      color: #2b1e0f;
+      font-family:"UnifrakturMaguntia","EB Garamond",serif;
+      font-size:2.4rem;
+      font-weight:400;
+      color:#2b1e0f;
       letter-spacing:.5px;
-      text-shadow: 0 1px 0 #fff6;
-      margin-bottom: .6rem;
-      position: relative;
+      text-shadow:0 1px 0 #fff6;
+      margin:.1rem 0 .6rem;
+      position:relative;
     }
     h1::after{
       content:"✦";
@@ -152,64 +100,81 @@
       opacity:.85;
       margin-top:.35rem;
       padding-bottom:.25rem;
-      border-bottom:1px solid rgba(120,90,50,.35);
+      border-bottom:1px solid var(--border);
       width:100%;
       text-align:center;
     }
-    .meta{
-      color:#4a3421;
-      font-style: italic;
-    }
+    .meta{ color:#4a3421; font-style:italic; }
 
-    /* 卡片换成羊皮纸盒子 */
+    /* 顶部导航 */
+    nav a{margin-right:18px}
+    a{color:#5a3b1c;text-decoration:underline;text-decoration-color:rgba(124,84,33,.7);text-underline-offset:3px}
+    a:hover{color:var(--accent);text-decoration-thickness:2px}
+
+    /* 卡片羊皮纸 */
     .card{
       background: rgba(255,255,245,.88);
-      border: 1px solid rgba(150,120,80,.35);
-      box-shadow: 0 8px 20px rgba(80,60,40,.12), inset 0 1px 0 #fff6;
-      border-radius: 12px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:18px 20px;
+      margin-top:16px;
+      box-shadow:0 8px 20px rgba(80,60,40,.12), inset 0 1px 0 #fff6;
+      backdrop-filter:saturate(110%);
     }
 
-    /* 小节标题用哥特字体（略小） */
-    h2.section-title{
-      font-family: "UnifrakturMaguntia","EB Garamond",serif;
-      font-size: 28px;
-      color:#2b1e0f;
+    /* 小节标题（哥特体） */
+    .section-title{
+      font-family:"UnifrakturMaguntia","EB Garamond",serif;
+      font-size:28px;
+      font-weight:400;
       margin:6px 0 4px;
-      text-shadow: 0 1px 0 #fff6;
+      color:#2b1e0f;
+      text-shadow:0 1px 0 #fff6;
     }
 
-    /* 首段首字下沉（About me 里首段） */
+    /* About me: 文本 + 右侧照片 */
+    .about-grid{
+      display:grid;
+      grid-template-columns: minmax(0,1fr) 240px;
+      gap:16px 24px;
+      align-items:start;
+    }
+    .about-photo{ margin:0; text-align:center; }
+    .about-photo .img-about{
+      width:220px;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      display:block; margin:0 auto;
+    }
+    @media (max-width: 760px){
+      .about-grid{ grid-template-columns:1fr; }
+      .about-photo{ margin-top:4px; }
+    }
+
+    /* 首段首字下沉 */
     main .card:first-of-type p:first-of-type::first-letter{
-      font-family: "UnifrakturMaguntia","EB Garamond",serif;
+      font-family:"UnifrakturMaguntia","EB Garamond",serif;
       float:left;
-      font-size: 3rem;
-      line-height: .9;
+      font-size:3rem;
+      line-height:.9;
       padding-right:.18rem;
       margin-top:.15rem;
       color:#3b2713;
     }
 
-    /* 复古链接：古铜色下划线 */
-    a{
-      color:#5a3b1c;
-      text-decoration: underline;
-      text-decoration-color: rgba(124,84,33,.7);
-      text-underline-offset: 3px;
+    /* Beethoven 图 */
+    .figure--narrow{ text-align:center; }
+    .img-es{
+      width:min(220px,100%);
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
     }
-    a:hover{
-      color:#7a4d24;
-      text-decoration-thickness: 2px;
-    }
-
-    /* 列表改成 ✶ 符号 */
-    .card ul{ list-style: none; padding-left:1.2rem; }
-    .card ul li{ position: relative; }
-    .card ul li::before{
-      content:"✶";
-      position:absolute; left:-1.2rem; top:.1rem;
-      color:#8c6a2d;
-      font-size: .95rem;
-    }
+    .figure{margin:0}
+    .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
   </style>
 </head>
 <body>
@@ -231,7 +196,7 @@
       <h2 class="section-title">About me</h2>
 
       <div class="about-grid">
-        <!-- 左列：正文 -->
+        <!-- 文本 -->
         <div>
           <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
             <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “higher invariants”</a>
@@ -257,7 +222,7 @@
           <p><strong>Office:</strong> M 005</p>
         </div>
 
-        <!-- 右列：照片（assets/picture.jpg） -->
+        <!-- 右侧头像 -->
         <figure class="about-photo">
           <a href="assets/picture.jpg" target="_blank" rel="noopener">
             <img src="assets/picture.jpg" alt="Portrait" class="img-about" loading="lazy">
@@ -276,11 +241,12 @@
         <figcaption class="figure-caption">„Es muss sein.“</figcaption>
       </figure>
     </section>
-
   </main>
 
   <script>
-    document.getElementById('updated') && (document.getElementById('updated').textContent = new Date().toISOString().slice(0,10));
+    /* 若未来添加“Last updated”，确保不会报错 */
+    var el = document.getElementById('updated');
+    if (el) el.textContent = new Date().toISOString().slice(0,10);
   </script>
 </body>
 </html>
