@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,53 +13,131 @@
   <meta property="og:url" content="https://yuenianzhou.github.io/personal-website/links.html" />
   <meta property="og:site_name" content="Yuenian Zhou" />
 
-  <!-- Fonts (same as homepage) -->
+  <!-- Base fonts + Medieval set (same as other pages) -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
-<style>
-  :root{
-    --max: 1280px;
-    --ink: #111;
-    --border: #e5e7eb;
-    --card-bg: #fff;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:"Lora", Georgia, "Times New Roman", serif;
-    font-size:16.5px;
-    line-height:1.9;
-    color:var(--ink);
-    background:#fafafa;
-  }
-  .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
-  header{background:#fff;border-bottom:1px solid var(--border)}
-  h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px} /* ← was 1.75rem */
-  .meta{color:#111}
-  nav a{margin-right:18px}
-  a{color:#111;text-decoration:underline;text-underline-offset:2px}
-  a:hover{text-decoration:underline}
-  .card{
-    background:var(--card-bg);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:18px 20px;
-    margin-top:16px;
-    box-shadow:0 2px 6px rgba(0,0,0,.04);
-  }
-  h2.section-title{
-    font-family:"Dancing Script", cursive;
-    font-size:32px; /* ← was 40px */
-    font-weight:700;
-    margin:8px 0 6px; /* 间距也略收一点，可要可不要 */
-    color:#111;
-  }
-  ul{padding-left:1.1rem;margin:.3rem 0}
-  li{margin:.25rem 0}
-  .small{font-size:.94rem}
-  footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
-</style>
+  <style>
+    :root{
+      --max: 1280px;
+      --ink: #111;
+      --border: #e5e7eb;
+      --card-bg: #fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Lora", Georgia, "Times New Roman", serif;
+      font-size:16.5px;
+      line-height:1.9;
+      color:var(--ink);
+      background:#fafafa;
+    }
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
+    header{background:#fff;border-bottom:1px solid var(--border)}
+    h1{margin:.1rem 0 .5rem;font-size:1.5rem;font-weight:600;letter-spacing:.2px}
+    .meta{color:#111}
+    nav a{margin-right:18px}
+    a{color:#111;text-decoration:underline;text-underline-offset:2px}
+    a:hover{text-decoration:underline}
+    .card{
+      background:var(--card-bg);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px 20px;
+      margin-top:16px;
+      box-shadow:0 2px 6px rgba(0,0,0,.04);
+    }
+    h2.section-title{
+      font-family:"Dancing Script", cursive;
+      font-size:32px;
+      font-weight:700;
+      margin:8px 0 6px;
+      color:#111;
+    }
+    ul{padding-left:1.1rem;margin:.3rem 0}
+    li{margin:.25rem 0}
+    .small{font-size:.94rem}
+    footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
+  </style>
 
+  <!-- ===== Medieval / Vintage THEME overrides (match index & cv) ===== -->
+  <style>
+    /* Parchment background + subtle texture */
+    body{
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(160,130,90,.08), transparent 60%),
+        radial-gradient(1000px 600px at 80% 90%, rgba(120,100,70,.06), transparent 60%),
+        #f8f2e4;
+      color:#2a1d12;
+      font-family: "EB Garamond","Lora", Georgia, "Times New Roman", serif;
+    }
+    header{
+      background: transparent;
+      border: 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid rgba(120,90,50,.25);
+    }
+
+    /* Gothic page title with ornament */
+    h1{
+      font-family: "UnifrakturMaguntia", "EB Garamond", serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #2b1e0f;
+      letter-spacing:.5px;
+      text-shadow: 0 1px 0 #fff6;
+      margin-bottom: .6rem;
+      position: relative;
+    }
+    h1::after{
+      content:"✦";
+      display:block;
+      color:#a6792e;
+      opacity:.85;
+      margin-top:.35rem;
+      padding-bottom:.25rem;
+      border-bottom:1px solid rgba(120,90,50,.35);
+      width:100%;
+      text-align:center;
+    }
+    .meta{ color:#4a3421; font-style: italic; }
+
+    /* Cards on parchment */
+    .card{
+      background: rgba(255,255,245,.88);
+      border: 1px solid rgba(150,120,80,.35);
+      box-shadow: 0 8px 20px rgba(80,60,40,.12), inset 0 1px 0 #fff6;
+      border-radius: 12px;
+    }
+
+    /* Section titles gothic */
+    h2.section-title{
+      font-family: "UnifrakturMaguntia","EB Garamond",serif;
+      font-size: 28px;
+      color:#2b1e0f;
+      margin:6px 0 4px;
+      text-shadow: 0 1px 0 #fff6;
+    }
+
+    /* Vintage links */
+    a{
+      color:#5a3b1c;
+      text-decoration: underline;
+      text-decoration-color: rgba(124,84,33,.7);
+      text-underline-offset: 3px;
+    }
+    a:hover{ color:#7a4d24; text-decoration-thickness: 2px; }
+
+    /* Replace bullets with ✶ */
+    .card ul{ list-style: none; padding-left:1.2rem; }
+    .card ul li{ position: relative; }
+    .card ul li::before{
+      content:"✶";
+      position:absolute; left:-1.2rem; top:.1rem;
+      color:#8c6a2d; font-size:.95rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -68,7 +147,6 @@
     </div>
   </header>
 
-  <!-- Top nav (same as other pages) -->
   <nav class="wrap">
     <a href="index.html">Homepage</a>
     <a href="cv.html">CV</a>
@@ -157,7 +235,7 @@
         <li><a href="https://www2.math.upenn.edu/~harbater/abhyankar.pdf" target="_blank" rel="noopener">Harbater, “Abhyankar’s conjectures in Galois theory: current status and future directions”</a></li>
         <li><a href="https://www2.math.upenn.edu/~harbater/embedding.pdf" target="_blank" rel="noopener">Harbater, “Abhyankar’s Conjecture and Embedding Problems”</a></li>
         <li><a href="https://gallica.bnf.fr/ark:/12148/bpt6k5753759s/f7.item" target="_blank" rel="noopener">Serre, “Construction de revêtements étales de la droite affine en caractéristique p”</a></li>
-        <li><a href="https://smf.emath.fr/publications/revetements-de-la-droite-affine-en-caracteristique-p0-et-conjecture-dabhyankar" target="_blank" rel="noopener">Raynaud, “Revêtements de la droite affine en caractéristique p>0…”</a></li>
+        <li><a href="https://smf.emath.fr/publications/revetements-de-la-droite-affine-en-caracteristique-p0-et-conjecture-dabhyankar" target="_blank" rel="noopener">Raynaud, “Revêtements de la droite affine en caractéristique p&gt;0…”</a></li>
       </ul>
     </section>
 
