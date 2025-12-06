@@ -12,22 +12,36 @@
   <meta property="og:url" content="https://yuenianzhou.github.io/personal-website/links.html" />
   <meta property="og:site_name" content="Yuenian Zhou" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts: Special Elite for body and headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <style>
     :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
     *{box-sizing:border-box}
-    body{ margin:0; font-family:"Special Elite", Georgia, "Times New Roman", serif; letter-spacing:.2px; font-size:16.5px; line-height:1.9; color:var(--ink); background:#fafafa; }
+    body{
+      margin:0;
+      font-family:"Special Elite", Georgia, "Times New Roman", serif;
+      letter-spacing:.2px;
+      font-size:16.5px; line-height:1.9; color:var(--ink); background:#fafafa;
+    }
     .wrap{ max-width:var(--max); margin:0 auto; padding:26px 28px; }
     header{ background:#fff; border-bottom:1px solid var(--border); }
-    h1{ margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:.3px; }
+
+    /* 标题也用 Special Elite，保持原大小 */
+    h1{
+      font-family:"Special Elite", Georgia, "Times New Roman", serif;
+      margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:.3px;
+    }
+    h2.section-title{
+      font-family:"Special Elite", Georgia, "Times New Roman", serif;
+      font-size:32px; font-weight:400; margin:8px 0 6px; color:#111; letter-spacing:.2px;
+    }
+
     .meta{ color:#111 }
     nav a{ margin-right:18px }
     a{ color:#111; text-decoration:underline; text-underline-offset:2px }
     a:hover{ text-decoration:underline }
     .card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04); }
-    h2.section-title{ font-family:"Dancing Script", cursive; font-size:32px; font-weight:700; margin:8px 0 6px; color:#111; }
     ul{ padding-left:1.1rem; margin:.3rem 0 }
     li{ margin:.25rem 0 }
     .small{ font-size:.94rem }
@@ -194,76 +208,6 @@
         <li><a href="https://math.mit.edu/~conglong/notes/pure_motives_rigid_local_systems.pdf" target="_blank" rel="noopener">C. Li, “Pure Motives and Rigid Local Systems”</a></li>
       </ul>
     </section>
-
-    <section class="card">
-      <h2 class="section-title">Arithmetic Local Systems</h2>
-      <ul class="small">
-        <li><a href="https://arxiv.org/abs/1708.06827" target="_blank" rel="noopener">D. Litt, “Arithmetic representations of fundamental groups I”</a></li>
-        <li><a href="https://projecteuclid.org/journals/duke-mathematical-journal/volume-170/issue-8/Arithmetic-representations-of-fundamental-groups-II-Finiteness/10.1215/00127094-2020-0086.full" target="_blank" rel="noopener">D. Litt, “Arithmetic representations… II: Finiteness”</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Nagata’s Compactification</h2>
-      <ul class="small">
-        <li><a href="https://math.stanford.edu/~conrad/papers/nagatafinal.pdf" target="_blank" rel="noopener">Brian Conrad, “Deligne’s Notes on Nagata Compactifications”</a></li>
-        <li><a href="https://link.springer.com/article/10.1007/BF02571361" target="_blank" rel="noopener">W. Lütkebohmert, “On compactification of schemes”</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Companion / Weil–Deligne</h2>
-      <ul class="small">
-        <li><a href="https://arxiv.org/abs/0705.3251" target="_blank" rel="noopener">Drinfeld, “On a conjecture of Deligne”</a></li>
-        <li><a href="https://publications.ias.edu/sites/default/files/Number20.pdf" target="_blank" rel="noopener">Deligne, “Les constantes des équations fonctionnelles des fonctions L”</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Étale Cohomology of Algebraic Number Fields</h2>
-      <ul class="small">
-        <li><a href="https://math.stanford.edu/~conrad/BSDseminar/Notes/L4.pdf" target="_blank" rel="noopener">Conrad–Masullo, “Étale cohomology of algebraic number fields”</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Profinite Groups / Representation Theory</h2>
-      <ul class="small">
-        <li><a href="https://link.springer.com/book/10.1007/978-3-662-04097-3" target="_blank" rel="noopener">Ribes–Zalesskii, <em>Profinite Groups</em></a></li>
-        <li><a href="https://link.springer.com/book/10.1007/BFb0085965" target="_blank" rel="noopener">T. tom Dieck, <em>Transformation Groups and Representation Theory</em></a></li>
-        <li><a href="https://link.springer.com/book/10.1007/978-3-642-59141-9" target="_blank" rel="noopener">Serre, <em>Galois Cohomology</em></a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Néron Models</h2>
-      <ul class="small">
-        <li><a href="https://link.springer.com/book/10.1007/978-3-642-51438-8" target="_blank" rel="noopener">Bosch–Lütkebohmert–Raynaud, <em>Néron Models</em></a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Alterations / Slope / Deformation / Vector Bundles / Esquisse</h2>
-      <ul class="small">
-        <li><a href="https://www.numdam.org/item/PMIHES_1996__83__51_0/" target="_blank" rel="noopener">A. J. de Jong, “Smoothness, semi-stability and alterations”</a></li>
-        <li><a href="https://webusers.imj-prg.fr/~yves.andre/slopefiltr.pdf" target="_blank" rel="noopener">Y. André, “Slope filtrations” (notes)</a></li>
-        <li><a href="https://math.umd.edu/~wmg/PMIHES_1988__67__43_0.pdf" target="_blank" rel="noopener">Goldman–Millson, “Deformation theory of representations…”</a></li>
-        <li><a href="https://press.princeton.edu/books/paperback/9780691621225/the-topology-of-fibre-bundles" target="_blank" rel="noopener">N. Steenrod, <em>The Topology of Fibre Bundles</em></a></li>
-        <li><a href="https://www.grothendieckcircle.org/wp-content/uploads/EsquisseProgram.pdf" target="_blank" rel="noopener">Grothendieck, <em>Esquisse d’un programme</em></a></li>
-      </ul>
-    </section>
-
-    <footer>
-      Last updated: <span id="updated"></span>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
-  </script>
-</body>
-</html>
-
 
     <section class="card">
       <h2 class="section-title">Arithmetic Local Systems</h2>
