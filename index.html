@@ -37,12 +37,7 @@
   </script>
 
   <style>
-    :root{
-      --max: 1280px;
-      --ink: #111;
-      --border: #e5e7eb;
-      --card-bg: #fff;
-    }
+    :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -56,7 +51,7 @@
     .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
     header{background:#fff;border-bottom:1px solid var(--border)}
 
-    /* Headings (Special Elite, keep original sizes) */
+    /* Headings */
     h1{
       font-family:"Special Elite", Georgia, "Times New Roman", serif;
       margin:.1rem 0 .5rem;
@@ -89,6 +84,26 @@
     ul{padding-left:1.1rem;margin:.3rem 0}
     li{margin:.25rem 0}
 
+    /* About me: text + right image */
+    .about-grid{
+      display:grid;
+      grid-template-columns: minmax(0,1fr) 240px; /* 文本自适应 + 右列固定宽度 */
+      gap:16px 24px;
+      align-items:start;
+    }
+    .about-photo{ margin:0; text-align:center; }
+    .about-photo .img-about{
+      width:220px;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      display:block; margin:0 auto;
+    }
+    @media (max-width: 760px){
+      .about-grid{ grid-template-columns: 1fr; }
+      .about-photo{ margin-top:6px; }
+    }
+
     /* Beethoven image */
     .figure--narrow{ text-align:center; }
     .img-es{
@@ -101,8 +116,6 @@
     }
     .figure{margin:0}
     .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
-
-    footer{color:#111;font-size:.92rem;margin:2rem 0 1rem;text-align:center}
   </style>
 </head>
 <body>
@@ -123,42 +136,51 @@
     <section class="card">
       <h2 class="section-title">About me</h2>
 
-      <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
-        <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “higher invariants”</a>
-        at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
-        <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
-      </p>
-      <p>
-        Previously, I completed my master’s studies at the
-        <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
-        (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
-        <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
-      </p>
-      <p>
-        My research interests are algebraic geometry and number theory (with a geometric flavor), especially
-        ℓ-adic local systems,p-adic local systems, ℓ-independence, the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
-      </p>
-      <p>
-        Currently, I’m focusing on local systems over mixed-characteristic local fields, in particular the arithmetic
-        properties of local systems over deformations of stable curves in the Deligne–Mumford stack.
-      </p>
+      <div class="about-grid">
+        <!-- 左侧文本 -->
+        <div>
+          <p><strong>I’m Yuenian Zhou</strong>, a Ph.D. student and an associated member of
+            <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “higher invariants”</a>
+            at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
+            <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
+          </p>
+          <p>
+            Previously, I completed my master’s studies at the
+            <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
+            (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
+            <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
+          </p>
+          <p>
+            My research interests are algebraic geometry and number theory (with a geometric flavor), especially
+            ℓ-adic local systems, p-adic local systems, ℓ-independence, the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
+          </p>
+          <p>
+            Currently, I’m focusing on local systems over mixed-characteristic local fields, in particular the arithmetic
+            properties of local systems over deformations of stable curves in the Deligne–Mumford stack.
+          </p>
 
-      <p><strong>Email:</strong> <a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></p>
-      <p><strong>Office:</strong> M 005</p>
+          <p><strong>Email:</strong> <a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></p>
+          <p><strong>Office:</strong> M 005</p>
+        </div>
+
+        <!-- 右侧配图 -->
+        <figure class="about-photo">
+          <a href="assets/g-a.jpeg" target="_blank" rel="noopener">
+            <img src="assets/g-a.jpeg" alt="Grothendieck & Atiyah, 1958" class="img-about" loading="lazy">
+          </a>
+        </figure>
+      </div>
     </section>
 
-    <!-- Keep Beethoven image -->
+    <!-- Beethoven image -->
     <section class="card">
       <figure class="figure figure--narrow">
         <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
-          <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt."
-               class="img-es" loading="lazy">
+          <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt." class="img-es" loading="lazy">
         </a>
         <figcaption class="figure-caption">„Es muss sein.“</figcaption>
       </figure>
     </section>
-
-
   </main>
 </body>
 </html>
