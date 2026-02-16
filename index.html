@@ -80,10 +80,10 @@
     }
     .float-right figcaption{font-size:.9rem; opacity:.8; margin-top:4px}
 
-    /* Shared image style (确保两张并排图大小一致) */
+    /* Shared image style (两张并排图大小一致) */
     .figure--narrow{ text-align:center; }
     .img-es{
-      width:min(220px,100%); height:auto; display:block; margin:0 auto;
+      width:min(220px, 44vw); height:auto; display:block; margin:0 auto;
       border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.12);
     }
     .figure{margin:0}
@@ -93,19 +93,17 @@
       .float-right{ float:none; width:100%; max-width:260px; margin:0 auto 10px; }
     }
 
-    /* 两张图并排 */
+    /* 两张图：强制同一行，不换行 */
     .figure-pair{
       display:flex;
       gap:22px;
       justify-content:center;
       align-items:flex-start;
-      flex-wrap:wrap;
+      flex-wrap:nowrap;          /* 关键：不允许换行 */
+      overflow-x:auto;           /* 极窄屏幕时可横向滚动（仍保持同一行） */
+      -webkit-overflow-scrolling:touch;
     }
     .figure-pair .figure{ margin:0; }
-
-    @media (max-width:760px){
-      .figure-pair{ flex-direction:column; align-items:center; }
-    }
   </style>
 </head>
 <body>
@@ -126,12 +124,10 @@
     <section class="card">
       <h2 class="section-title">About me</h2>
 
-      <!-- 右侧环绕图片，放在第一段开头 -->
       <figure class="float-right">
         <a href="assets/picture.jpg" target="_blank" rel="noopener">
           <img src="assets/picture.jpg" alt="Grothendieck & Atiyah, 1958" loading="lazy">
         </a>
-        <!-- <figcaption>Grothendieck & Atiyah (1958)</figcaption> -->
       </figure>
 
       <p><strong>I’m Yuenian Zhou(周越年)</strong>, a Ph.D. student and an associated member of
@@ -185,5 +181,6 @@
   </main>
 </body>
 </html>
+
 
 
