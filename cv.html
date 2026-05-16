@@ -6,17 +6,17 @@
 
   <title>CV – Yuenian Zhou</title>
   <meta name="author" content="Yuenian Zhou" />
-  <meta name="description" content="Curriculum Vitae of Yuenian Zhou — Math PhD Candidate at Universität Regensburg (SFB 1085 Higher Invariants)." />
-  <link rel="canonical" href="https://yuenianzhou.github.io/personal-website/cv.html" />
+  <meta name="description" content="Curriculum Vitae of Yuenian Zhou — Ph.D. candidate in mathematics at Universität Regensburg (SFB 1085 Higher Invariants)." />
+  <link rel="canonical" href="https://yuenianzhou.github.io/cv.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CV – Yuenian Zhou" />
   <meta property="og:site_name" content="Yuenian Zhou" />
-  <meta property="og:url" content="https://yuenianzhou.github.io/personal-website/cv.html" />
+  <meta property="og:url" content="https://yuenianzhou.github.io/cv.html" />
 
   <!-- Fonts: Special Elite for body and headings -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&amp;display=swap" rel="stylesheet">
 
   <style>
     :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
@@ -24,7 +24,7 @@
     body{
       margin:0;
       font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      letter-spacing:.2px;
+      letter-spacing:0;
       font-size:16.5px; line-height:1.9; color:var(--ink); background:#fafafa;
     }
     .wrap{ max-width:var(--max); margin:0 auto; padding:26px 28px; }
@@ -33,21 +33,30 @@
     /* 标题也用 Special Elite，保持原大小 */
     h1{
       font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:.3px;
+      margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:0;
     }
     h2{
       font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      font-size:32px; font-weight:400; margin:8px 0 6px; color:#111; letter-spacing:.2px;
+      font-size:32px; font-weight:400; margin:8px 0 6px; color:#111; letter-spacing:0;
     }
 
     nav a{ margin-right:18px }
     a{ color:#111; text-decoration:underline; text-underline-offset:2px }
     a:hover{ text-decoration:underline }
-    .card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04); }
+    .card{ background:#fff; border:1px solid var(--border); border-radius:8px; padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04); }
     ul{ padding-left:1.1rem; margin:.25rem 0 }
     li{ margin:.25rem 0 }
     .two-col{ display:grid; grid-template-columns: 200px 1fr; gap:10px 18px; }
     .meta{ color:#111 }
+    .math,
+    .math-var{
+      font-family:"Cambria Math","STIX Two Math","STIX Two Text","Times New Roman",serif;
+      letter-spacing:0;
+    }
+    .math-var{ font-style:italic; }
+    @media (max-width:640px){
+      .two-col{ grid-template-columns:1fr; gap:2px 0; }
+    }
   </style>
 </head>
 <body>
@@ -92,8 +101,8 @@
     <section class="card">
       <h2>Research Interests</h2>
       <ul>
-        <li>ℓ-adic local systems; ℓ-independence.</li>
-        <li>p-adic Hodge theory;p-adic local systems; Fontaine–Mazur conjecture.</li>
+        <li><span class="math">ℓ</span>-adic local systems; <span class="math">ℓ</span>-independence.</li>
+        <li><span class="math-var">p</span>-adic Hodge theory; <span class="math-var">p</span>-adic local systems; Fontaine–Mazur conjecture.</li>
       </ul>
     </section>
 
@@ -101,12 +110,12 @@
       <h2>Conferences &amp; Schools</h2>
       <ul>
         <li><em>CAVARET 2: “Curves, Abelian VArieties and RElated Topics”</em>, Jul 13–17, 2026, Barcelona.</li>
-        <li><em>New developments in p-adic representation theory</em>, Mar 18–20, 2026, Essen.</li>
+        <li><em>New developments in <span class="math-var">p</span>-adic representation theory</em>, Mar 18–20, 2026, Essen.</li>
         <li><em>60th Birthday Conference for Alexander Schmid</em>, Mar 9–13, 2026, Heidelberg.</li>
 
         <li><em>Higher Invariants: interactions between arithmetic geometry and global analysis</em>, Oct 6–10, 2025, Regensburg.</li>
-        <li><em>Motives, L-values and Eisenstein series (Guido Kings 60th)</em>, Sep 22–26, 2025, Regensburg.</li>
-        <li><em>Summer School on Hodge Modules and D-modules</em>, Aug 3–8, 2025, Shanghai.</li>
+        <li><em>Motives, <span class="math-var">L</span>-values and Eisenstein series (Guido Kings 60th)</em>, Sep 22–26, 2025, Regensburg.</li>
+        <li><em>Summer School on Hodge Modules and <span class="math-var">D</span>-modules</em>, Aug 3–8, 2025, Shanghai.</li>
         <li><em>Étale Cohomology and Étale Homotopy</em>, Jun 16–20, 2025, Frankfurt.</li>
 
         <li><em>School on Hodge Theory and Shimura Varieties</em>, Sep 23–27, 2024, Essen.</li>
@@ -114,7 +123,7 @@
         <li><em>IHES: A Conference in Honor of Hélène Esnault (70th)</em>, 2024, Paris.</li>
         <li><em>Nearby Cycles and Derived Geometry</em>, 2024, Regensburg.</li>
 
-        <li><em>IHES Summer School — Recent Advances in Algebraic K-theory</em>, 2023, Paris.</li>
+        <li><em>IHES Summer School — Recent Advances in Algebraic <span class="math-var">K</span>-theory</em>, 2023, Paris.</li>
         <li><em>Xi’an Jiaotong University Summer School of Number Theory</em>, 2021, Xi’an.</li>
       </ul>
     </section>
@@ -122,7 +131,7 @@
     <section class="card">
       <h2>Preprints &amp; Notes</h2>
       <ul>
-        <li>In preparation — A weak companion of local systems over local field.</li>
+        <li>In preparation — A weak companion of local systems over a local field.</li>
         <li>Master’s thesis (M2, Université Paris-Saclay, 2023) —
           <a href="assets/YuenianZhou_MSc_Thesis_2023.pdf" target="_blank" rel="noopener">PDF</a>
         </li>
@@ -135,12 +144,12 @@
 
     <section class="card">
       <h2>Teaching (Lehre)</h2>
-<ul>
-    <li><strong>Lehre Sommersemester 25</strong>: <em>Arithmetik von quadratischen Formen</em>, Mo 16–18, M 101 (Carolyn Echter, Yuenian Zhou)</li>
-    <li><strong>Lehre Wintersemester 25/26</strong>: <em>Seminar Galois theory in algebra and topology</em>, Di 16–18, M (Andrea Panontin, Yuenian Zhou)</li>
-    <li><strong>Lehre Sommersemester 26</strong>: <em>Kommutative Algebra (Übung)</em> (Clara Löh)</li>
-    <li><strong>Lehre Sommersemester 26</strong>: <em>Galois Categories and Étale Fundamental Groups</em> (Andrea Panontin, Yuenian Zhou)</li>
-  </ul>
+      <ul>
+        <li><strong>Lehre Sommersemester 25</strong>: <em>Arithmetik von quadratischen Formen</em>, Mo 16–18, M 101 (Carolyn Echter, Yuenian Zhou)</li>
+        <li><strong>Lehre Wintersemester 25/26</strong>: <em>Seminar Galois Theory in Algebra and Topology</em>, Di 16–18, M (Andrea Panontin, Yuenian Zhou)</li>
+        <li><strong>Lehre Sommersemester 26</strong>: <em>Kommutative Algebra (Übung)</em> (Clara Löh)</li>
+        <li><strong>Lehre Sommersemester 26</strong>: <em>Galois Categories and Étale Fundamental Groups</em> (Andrea Panontin, Yuenian Zhou)</li>
+      </ul>
     </section>
 
     <section class="card">
@@ -155,5 +164,3 @@
   </main>
 </body>
 </html>
-
-
