@@ -77,39 +77,7 @@ img {
 }
 
 .site-identity {
-  align-items: center;
-  display: grid;
-  gap: 17px;
-  grid-template-columns: 52px minmax(0, 1fr);
   min-width: 0;
-}
-
-.site-identity-copy {
-  min-width: 0;
-}
-
-.brand-mark {
-  align-items: center;
-  aspect-ratio: 1;
-  background:
-    radial-gradient(circle at 36% 30%, rgba(255, 255, 255, 0.72), transparent 48%),
-    var(--paper-deep);
-  border: 1px solid var(--rule);
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 3px var(--paper),
-    inset 0 0 0 4px rgba(149, 117, 72, 0.42),
-    0 3px 10px rgba(65, 48, 28, 0.09);
-  color: var(--accent-strong);
-  display: flex;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.14rem;
-  font-variant-caps: small-caps;
-  font-weight: 600;
-  justify-content: center;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  width: 52px;
 }
 
 .site-name {
@@ -385,13 +353,12 @@ summary:focus-visible {
 }
 
 .figure img {
-  aspect-ratio: 1 / 1;
   background: var(--paper-deep);
   border: 1px solid var(--rule);
   border-radius: 0;
   box-shadow: 0 12px 26px rgba(64, 46, 25, 0.14);
   filter: sepia(0.07) saturate(0.9);
-  object-fit: cover;
+  height: auto;
   padding: 8px;
   width: 100%;
 }
@@ -606,16 +573,6 @@ li::marker {
     padding-block: 20px 18px;
   }
 
-  .site-identity {
-    gap: 13px;
-    grid-template-columns: 46px minmax(0, 1fr);
-  }
-
-  .brand-mark {
-    font-size: 1.06rem;
-    width: 46px;
-  }
-
   .primary-nav {
     border-left: 0;
     border-top: 1px solid var(--border);
@@ -668,16 +625,6 @@ li::marker {
 
   .card:not(.reference-card)::before {
     inset: 6px;
-  }
-
-  .site-identity {
-    gap: 12px;
-    grid-template-columns: 42px minmax(0, 1fr);
-  }
-
-  .brand-mark {
-    font-size: 1rem;
-    width: 42px;
   }
 
   .site-meta {
