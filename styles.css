@@ -1,6 +1,8 @@
 :root {
   --page-width: 1080px;
   --reading-width: 70ch;
+  --font-display: "Libre Caslon Display", "Iowan Old Style", Baskerville, Georgia, serif;
+  --font-text: "Libre Caslon Text", "Iowan Old Style", Baskerville, Georgia, serif;
   --ink: #2b2721;
   --muted: #70675a;
   --accent: #773b35;
@@ -38,7 +40,7 @@ body {
     radial-gradient(rgba(76, 57, 35, 0.035) 0.65px, transparent 0.65px);
   background-size: auto, 5px 5px;
   color: var(--ink);
-  font-family: "STIX Two Text", Georgia, "Times New Roman", serif;
+  font-family: var(--font-text);
   font-size: 17px;
   font-kerning: normal;
   line-height: 1.72;
@@ -82,11 +84,11 @@ img {
 
 .site-name {
   margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3.2vw, 2.55rem);
-  font-weight: 600;
-  letter-spacing: 0.028em;
-  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: 0.006em;
+  line-height: 1.04;
 }
 
 .site-name a {
@@ -99,7 +101,7 @@ img {
   color: var(--muted);
   font-size: 0.92rem;
   font-style: italic;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.012em;
   line-height: 1.45;
 }
 
@@ -116,8 +118,8 @@ img {
   border-bottom: 1px solid transparent;
   color: var(--muted);
   font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   padding: 5px 0 4px;
   position: relative;
   text-decoration: none;
@@ -133,7 +135,7 @@ img {
 .primary-nav a[aria-current="page"] {
   border-bottom-color: var(--accent);
   color: var(--accent-strong);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .primary-nav a[aria-current="page"]::after {
@@ -155,10 +157,10 @@ h1,
 h2,
 h3 {
   color: var(--ink);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-display);
   font-feature-settings: "kern" 1, "liga" 1;
-  font-weight: 600;
-  letter-spacing: 0.012em;
+  font-weight: 400;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -235,7 +237,7 @@ summary:focus-visible {
   color: var(--muted);
   font-size: 1.04rem;
   font-style: italic;
-  letter-spacing: 0.018em;
+  letter-spacing: 0.008em;
 }
 
 .card {
@@ -309,11 +311,11 @@ summary:focus-visible {
 .contact-list dt,
 .detail-grid dt {
   color: var(--accent-strong);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-text);
   font-size: 1.08rem;
   font-variant-caps: small-caps;
-  font-weight: 600;
-  letter-spacing: 0.045em;
+  font-weight: 700;
+  letter-spacing: 0.035em;
 }
 
 .contact-list dd,
@@ -368,7 +370,7 @@ summary:focus-visible {
   font-size: 0.93rem;
   font-style: italic;
   line-height: 1.45;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.012em;
   margin-top: 12px;
 }
 
@@ -408,11 +410,11 @@ summary:focus-visible {
   align-items: center;
   color: var(--accent);
   display: flex;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.08rem;
   font-variant-numeric: lining-nums tabular-nums;
-  font-weight: 600;
-  letter-spacing: 0.025em;
+  font-weight: 400;
+  letter-spacing: 0.012em;
   line-height: 1.5;
 }
 
@@ -538,7 +540,7 @@ li::marker {
 
 .math,
 .math-var {
-  font-family: "STIX Two Text", "Cambria Math", "Times New Roman", serif;
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
   letter-spacing: 0;
 }
 
