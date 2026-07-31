@@ -13,65 +13,62 @@
   <meta property="og:url" content="https://yuenianzhou.github.io/links.html" />
   <meta property="og:site_name" content="Yuenian Zhou" />
 
-  <!-- Fonts: Special Elite for body and headings -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&amp;display=swap" rel="stylesheet">
-
-  <style>
-    :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      letter-spacing:0;
-      font-size:16.5px; line-height:1.9; color:var(--ink); background:#fafafa;
-    }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:26px 28px; }
-    header{ background:#fff; border-bottom:1px solid var(--border); }
-
-    /* 标题也用 Special Elite，保持原大小 */
-    h1{
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:0;
-    }
-    h2.section-title{
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      font-size:32px; font-weight:400; margin:8px 0 6px; color:#111; letter-spacing:0;
-    }
-
-    .meta{ color:#111 }
-    nav a{ margin-right:18px }
-    a{ color:#111; text-decoration:underline; text-underline-offset:2px }
-    a:hover{ text-decoration:underline }
-    .card{ background:#fff; border:1px solid var(--border); border-radius:8px; padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04); }
-    ul{ padding-left:1.1rem; margin:.3rem 0 }
-    li{ margin:.25rem 0 }
-    .small{ font-size:.94rem }
-    footer{ color:#111; font-size:.92rem; margin:2rem 0 1rem; text-align:center }
-    .math,
-    .math-var{
-      font-family:"Cambria Math","STIX Two Math","STIX Two Text","Times New Roman",serif;
-      letter-spacing:0;
-    }
-    .math-var{ font-style:italic; }
-  </style>
+  <!-- Fonts and shared styles -->
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Special+Elite&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <h1>Links</h1>
-      <p class="meta">Selected references and open-access sources</p>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <div>
+        <h1 class="site-name"><a href="index.html">Yuenian Zhou</a></h1>
+        <p class="site-meta">Ph.D. candidate in Mathematics · Universität Regensburg · SFB 1085 “Higher Invariants”</p>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Homepage</a>
+        <a href="cv.html">CV</a>
+        <a href="links.html" aria-current="page">Links</a>
+      </nav>
     </div>
   </header>
 
-  <nav class="wrap">
-    <a href="index.html">Homepage</a>
-    <a href="cv.html">CV</a>
-    <a href="links.html">Links</a>
-  </nav>
-
   <main class="wrap">
+    <section class="page-intro">
+      <h2>Links</h2>
+      <p>Selected references and open-access sources in algebraic geometry and arithmetic geometry.</p>
+    </section>
 
-    <section class="card">
+    <nav class="card topic-index" aria-label="Reference topics">
+      <h2>Topics</h2>
+      <ul class="topic-list">
+        <li><a href="#ega">EGA</a></li>
+        <li><a href="#sga">SGA</a></li>
+        <li><a href="#weil-conjectures">Weil conjectures</a></li>
+        <li><a href="#perverse-sheaves">Perverse sheaves</a></li>
+        <li><a href="#fundamental-group">Fundamental group</a></li>
+        <li><a href="#abelian-varieties">Abelian varieties</a></li>
+        <li><a href="#galois-representations">Galois representations</a></li>
+        <li><a href="#monodromy">Monodromy</a></li>
+        <li><a href="#abhyankar">Abhyankar’s conjectures</a></li>
+        <li><a href="#hodge-theory">Hodge theory</a></li>
+        <li><a href="#gauss-manin">Gauss–Manin connection</a></li>
+        <li><a href="#betti-moduli">Betti moduli space</a></li>
+        <li><a href="#dm-stack">Deligne–Mumford stack</a></li>
+        <li><a href="#class-field-theory">Class field theory</a></li>
+        <li><a href="#local-systems">Local systems</a></li>
+        <li><a href="#rigid-local-systems">Rigid local systems</a></li>
+        <li><a href="#arithmetic-local-systems">Arithmetic local systems</a></li>
+        <li><a href="#compactification">Compactification</a></li>
+        <li><a href="#companions">Companions</a></li>
+        <li><a href="#etale-number-fields">Étale arithmetic</a></li>
+        <li><a href="#profinite-groups">Profinite groups</a></li>
+        <li><a href="#neron-models">Néron models</a></li>
+        <li><a href="#alterations">Alterations &amp; deformation</a></li>
+      </ul>
+    </nav>
+
+    <div class="references-grid">
+    <section id="ega" class="card reference-card">
       <h2 class="section-title">Éléments de géométrie algébrique (EGA)</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1960__4__5_0/" target="_blank" rel="noopener">EGA I. Le langage des schémas</a></li>
@@ -85,7 +82,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="sga" class="card reference-card">
       <h2 class="section-title">Séminaire de géométrie algébrique (SGA)</h2>
       <ul class="small">
         <li><a href="https://arxiv.org/abs/math/0206203" target="_blank" rel="noopener">SGA 1 (reprint, arXiv)</a></li>
@@ -97,7 +94,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="weil-conjectures" class="card reference-card">
       <h2 class="section-title">Weil Conjectures</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1980__52__313_0/" target="_blank" rel="noopener">Deligne, “La conjecture de Weil II” (Publ. Math. IHÉS 52, 1980)</a></li>
@@ -105,14 +102,14 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="perverse-sheaves" class="card reference-card">
       <h2 class="section-title">Perverse Sheaves</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/AST_1982__100__R3_0/" target="_blank" rel="noopener">Beilinson–Bernstein–Deligne–Gabber, <em>Faisceaux pervers</em> (Astérisque 100, 1982)</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="fundamental-group" class="card reference-card">
       <h2 class="section-title">Fundamental Group</h2>
       <ul class="small">
         <li><a href="https://arxiv.org/abs/math/0206203" target="_blank" rel="noopener">SGA 1: Revêtements étales et groupe fondamental (reprint)</a></li>
@@ -121,14 +118,14 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="abelian-varieties" class="card reference-card">
       <h2 class="section-title">Abelian Varieties</h2>
       <ul class="small">
         <li><a href="https://www.math.ru.nl/~bmoonen/boek/BookAV.html" target="_blank" rel="noopener">Edixhoven–van der Geer–Moonen, <em>Abelian Varieties</em> (online book)</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="galois-representations" class="card reference-card">
       <h2 class="section-title">Galois Representations</h2>
       <ul class="small">
         <li><a href="https://webusers.imj-prg.fr/~laurent.fargues/notes/notes.html" target="_blank" rel="noopener">Fontaine (ICM 1990 notes, hosted on Fargues’s page)</a></li>
@@ -137,7 +134,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="monodromy" class="card reference-card">
       <h2 class="section-title">Monodromy</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1970__39__175_0/" target="_blank" rel="noopener">Katz, “Nilpotent connections and the monodromy theorem” (IHÉS 39, 1970)</a></li>
@@ -145,7 +142,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="abhyankar" class="card reference-card">
       <h2 class="section-title">Abhyankar’s Conjectures</h2>
       <ul class="small">
         <li><a href="https://www2.math.upenn.edu/~harbater/abhyankar.pdf" target="_blank" rel="noopener">Harbater, “Abhyankar’s conjectures in Galois theory: current status and future directions”</a></li>
@@ -155,7 +152,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="hodge-theory" class="card reference-card">
       <h2 class="section-title">Hodge Theory</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1971__40__5_0/" target="_blank" rel="noopener">Deligne, <em>Théorie de Hodge II</em></a></li>
@@ -170,28 +167,28 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="gauss-manin" class="card reference-card">
       <h2 class="section-title">Gauss–Manin Connection</h2>
       <ul class="small">
         <li><a href="https://projecteuclid.org/journals/kyoto-journal-of-mathematics/volume-8/issue-2/On-the-differentiation-of-De-Rham-cohomology-classes-with-respect/10.1215/kjm/1250524135.full" target="_blank" rel="noopener">Katz–Oda, “On the differentiation of De Rham cohomology classes…”</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="betti-moduli" class="card reference-card">
       <h2 class="section-title">Betti Moduli Space</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1994__80__5_0/" target="_blank" rel="noopener">Simpson, “Moduli of representations… II”</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="dm-stack" class="card reference-card">
       <h2 class="section-title">Deligne–Mumford Stack</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1969__36__75_0/" target="_blank" rel="noopener">Deligne–Mumford, “The irreducibility of the space of curves of given genus”</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="class-field-theory" class="card reference-card">
       <h2 class="section-title">Class Field Theory</h2>
       <ul class="small">
         <li><a href="https://link.springer.com/book/10.1007/978-3-642-34356-8" target="_blank" rel="noopener">Serre, <em>Abelian <span class="math">ℓ</span>-adic Representations and Elliptic Curves</em></a></li>
@@ -199,7 +196,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="local-systems" class="card reference-card">
       <h2 class="section-title">Local Systems</h2>
       <ul class="small">
         <li><a href="https://arxiv.org/abs/1805.05392" target="_blank" rel="noopener">Esnault, “Some Arithmetic Properties of Complex Local Systems”</a></li>
@@ -208,7 +205,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="rigid-local-systems" class="card reference-card">
       <h2 class="section-title">Rigid Local Systems</h2>
       <ul class="small">
         <li><a href="https://press.princeton.edu/books/paperback/9780691085003/rigid-local-systems" target="_blank" rel="noopener">Katz, <em>Rigid Local Systems</em></a></li>
@@ -216,7 +213,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="arithmetic-local-systems" class="card reference-card">
       <h2 class="section-title">Arithmetic Local Systems</h2>
       <ul class="small">
         <li><a href="https://arxiv.org/abs/1708.06827" target="_blank" rel="noopener">D. Litt, “Arithmetic representations of fundamental groups I”</a></li>
@@ -224,7 +221,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="compactification" class="card reference-card">
       <h2 class="section-title">Nagata’s Compactification</h2>
       <ul class="small">
         <li><a href="https://math.stanford.edu/~conrad/papers/nagatafinal.pdf" target="_blank" rel="noopener">Brian Conrad, “Deligne’s Notes on Nagata Compactifications”</a></li>
@@ -232,7 +229,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="companions" class="card reference-card">
       <h2 class="section-title">Companion / Weil–Deligne</h2>
       <ul class="small">
         <li><a href="https://arxiv.org/abs/0705.3251" target="_blank" rel="noopener">Drinfeld, “On a conjecture of Deligne”</a></li>
@@ -240,14 +237,14 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="etale-number-fields" class="card reference-card">
       <h2 class="section-title">Étale Cohomology of Algebraic Number Fields</h2>
       <ul class="small">
         <li><a href="https://math.stanford.edu/~conrad/BSDseminar/Notes/L4.pdf" target="_blank" rel="noopener">Conrad–Masullo, “Étale cohomology of algebraic number fields”</a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="profinite-groups" class="card reference-card">
       <h2 class="section-title">Profinite Groups / Representation Theory</h2>
       <ul class="small">
         <li><a href="https://link.springer.com/book/10.1007/978-3-662-04097-3" target="_blank" rel="noopener">Ribes–Zalesskii, <em>Profinite Groups</em></a></li>
@@ -256,14 +253,14 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="neron-models" class="card reference-card">
       <h2 class="section-title">Néron Models</h2>
       <ul class="small">
         <li><a href="https://link.springer.com/book/10.1007/978-3-642-51438-8" target="_blank" rel="noopener">Bosch–Lütkebohmert–Raynaud, <em>Néron Models</em></a></li>
       </ul>
     </section>
 
-    <section class="card">
+    <section id="alterations" class="card reference-card">
       <h2 class="section-title">Alterations / Slope / Deformation / Vector Bundles / Esquisse</h2>
       <ul class="small">
         <li><a href="https://www.numdam.org/item/PMIHES_1996__83__51_0/" target="_blank" rel="noopener">A. J. de Jong, “Smoothness, semi-stability and alterations”</a></li>
@@ -273,6 +270,7 @@
         <li><a href="https://www.grothendieckcircle.org/wp-content/uploads/EsquisseProgram.pdf" target="_blank" rel="noopener">Grothendieck, <em>Esquisse d’un programme</em></a></li>
       </ul>
     </section>
+    </div>
   </main>
 </body>
 </html>

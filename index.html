@@ -17,8 +17,9 @@
   <meta property="profile:first_name" content="Yuenian" />
   <meta property="profile:last_name" content="Zhou" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&amp;display=swap" rel="stylesheet">
+  <!-- Fonts and shared styles -->
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Special+Elite&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -36,146 +37,84 @@
   }
   </script>
 
-  <style>
-    :root{ --max:1280px; --ink:#111; --border:#e5e7eb; --card-bg:#fff; }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      letter-spacing:0; font-size:16.5px; line-height:1.9; color:var(--ink);
-      background:#fafafa;
-    }
-    .wrap{max-width:var(--max);margin:0 auto;padding:26px 28px}
-    header{background:#fff;border-bottom:1px solid var(--border)}
-
-    h1{
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      margin:.1rem 0 .5rem; font-size:1.5rem; font-weight:400; letter-spacing:0;
-    }
-    .meta{color:#111}
-
-    nav a{margin-right:18px}
-    a{color:#111;text-decoration:underline;text-underline-offset:2px}
-    a:hover{text-decoration:underline}
-
-    h2.section-title{
-      font-family:"Special Elite", Georgia, "Times New Roman", serif;
-      font-size:32px; font-weight:400; margin:8px 0 6px; color:#111; letter-spacing:0;
-    }
-    .card{
-      background:var(--card-bg); border:1px solid var(--border); border-radius:8px;
-      padding:18px 20px; margin-top:16px; box-shadow:0 2px 6px rgba(0,0,0,.04);
-      position:relative;
-    }
-    /* 清除内部浮动，避免影响卡片高度 */
-    .card::after{content:"";display:block;clear:both}
-
-    /* 右侧嵌入图片（环绕排版） */
-    .float-right{
-      float:right; width:220px; margin:0 0 8px 16px; text-align:center;
-    }
-    .float-right img{
-      width:100%; height:auto; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.12);
-      display:block;
-    }
-    .float-right figcaption{font-size:.9rem; opacity:.8; margin-top:4px}
-
-    /* Shared image style (两张并排图大小一致) */
-    .figure--narrow{ text-align:center; }
-    .img-es{
-      width:min(220px, 44vw); height:auto; display:block; margin:0 auto;
-      border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.12);
-    }
-    .figure{margin:0}
-    .figure-caption{ text-align:center; margin-top:8px; font-style:italic; opacity:.9 }
-
-    @media (max-width:760px){
-      .float-right{ float:none; width:100%; max-width:260px; margin:0 auto 10px; }
-    }
-
-    /* 两张图：强制同一行，不换行 */
-    .figure-pair{
-      display:flex;
-      gap:22px;
-      justify-content:center;
-      align-items:flex-start;
-      flex-wrap:nowrap;          /* 关键：不允许换行 */
-      overflow-x:auto;           /* 极窄屏幕时可横向滚动（仍保持同一行） */
-      -webkit-overflow-scrolling:touch;
-    }
-    .figure-pair .figure{ margin:0; }
-    .math,
-    .math-var{
-      font-family:"Cambria Math","STIX Two Math","STIX Two Text","Times New Roman",serif;
-      letter-spacing:0;
-    }
-    .math-var{ font-style:italic; }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <h1>Yuenian Zhou’s Homepage</h1>
-      <p class="meta">Universität Regensburg · SFB 1085 “Higher Invariants” · Ph.D. Candidate in Mathematics</p>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <div>
+        <h1 class="site-name"><a href="index.html">Yuenian Zhou</a></h1>
+        <p class="site-meta">Ph.D. candidate in Mathematics · Universität Regensburg · SFB 1085 “Higher Invariants”</p>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Homepage</a>
+        <a href="cv.html">CV</a>
+        <a href="links.html">Links</a>
+      </nav>
     </div>
   </header>
 
-  <nav class="wrap">
-    <a href="index.html">Homepage</a>
-    <a href="cv.html">CV</a>
-    <a href="links.html">Links</a>
-  </nav>
-
   <main class="wrap">
-    <section class="card">
-      <h2 class="section-title">About me</h2>
+    <div class="home-grid">
+      <section class="card">
+        <h2>About me</h2>
+        <div class="prose">
+          <p><strong>I’m Yuenian Zhou (周越年)</strong>, a Ph.D. candidate in mathematics and an associated member of
+            <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “Higher Invariants”</a>
+            at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
+            <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
+          </p>
+          <p>
+            Previously, I completed my master’s studies at the
+            <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
+            (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
+            <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
+          </p>
+        </div>
+      </section>
 
+      <aside class="card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <dl class="contact-list">
+          <dt>Email</dt>
+          <dd><a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@<wbr>mathematik.<wbr><span class="email-domain">uni-regensburg.de</span></a></dd>
+          <dt>Office</dt>
+          <dd>M 005</dd>
+        </dl>
+      </aside>
 
-      <p><strong>I’m Yuenian Zhou (周越年)</strong>, a Ph.D. candidate in mathematics and an associated member of
-        <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “Higher Invariants”</a>
-        at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
-        <a href="https://kerz.app.uni-regensburg.de/" target="_blank" rel="noopener">Prof. Moritz Kerz</a>.
-      </p>
-      <p>
-        Previously, I completed my master’s studies at the
-        <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener">Université Paris-Saclay (Paris-Sud)</a> AAG
-        (Analysis, Arithmetic, Geometry). Before that, I obtained my bachelor’s degree in mathematics at
-        <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
-      </p>
-      <p>
-        My research interests lie in algebraic geometry and number theory, centered on local systems,
-        crystals, isocrystals, and their moduli stacks. I am especially interested in using moduli-theoretic
-        methods to study rigidity and arithmetic phenomena in complex, <span class="math-var">p</span>-adic,
-        and <span class="math">ℓ</span>-adic geometry, including <span class="math">ℓ</span>-independence,
-        the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
-      </p>
-      <p>
-        More broadly, I want to use moduli-theoretic and stack-theoretic methods to understand the geometric
-        and arithmetic properties of local systems, crystals, and isocrystals, including their deformation
-        theory, rigidity, and behavior over mixed-characteristic local fields.
-      </p>
+      <section class="card research-card">
+        <h2>Research interests</h2>
+        <div class="prose">
+          <p>
+            My research interests lie in algebraic geometry and number theory, centered on local systems,
+            crystals, isocrystals, and their moduli stacks. I am especially interested in using moduli-theoretic
+            methods to study rigidity and arithmetic phenomena in complex, <span class="math-var">p</span>-adic,
+            and <span class="math">ℓ</span>-adic geometry, including <span class="math">ℓ</span>-independence,
+            the Fontaine–Mazur conjecture, and Simpson’s motivicity conjecture.
+          </p>
+          <p>
+            More broadly, I want to use moduli-theoretic and stack-theoretic methods to understand the geometric
+            and arithmetic properties of local systems, crystals, and isocrystals, including their deformation
+            theory, rigidity, and behavior over mixed-characteristic local fields.
+          </p>
+        </div>
+      </section>
+    </div>
 
-      <p><strong>Email:</strong> <a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@mathematik.uni-regensburg.de</a></p>
-      <p><strong>Office:</strong> M 005</p>
-    </section>
-
-    <section class="card">
+    <section class="card visual-card" aria-label="Visual notes">
       <div class="figure-pair">
-        <!-- 左：Es muss sein -->
-        <figure class="figure figure--narrow">
+        <figure class="figure">
           <a href="assets/esmuss.jpg" target="_blank" rel="noopener">
-            <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt." class="img-es" loading="lazy">
+            <img src="assets/esmuss.jpg" alt="Es muss sein (Beethoven), music excerpt." loading="lazy">
           </a>
           <figcaption class="figure-caption">„Es muss sein.“</figcaption>
         </figure>
 
-        <!-- 右：GPT生成图（文件名有空格，路径用 %20） -->
-        <figure class="figure figure--narrow">
+        <figure class="figure">
           <a href="assets/Mathematische%20Abstraktionen%20und%20Geometrie.png" target="_blank" rel="noopener">
             <img
               src="assets/Mathematische%20Abstraktionen%20und%20Geometrie.png"
               alt="Mathematische Abstraktionen und Geometrie (generated by ChatGPT)"
-              class="img-es"
               loading="lazy"
             >
           </a>
