@@ -40,6 +40,7 @@ body {
   color: var(--ink);
   font-family: "STIX Two Text", Georgia, "Times New Roman", serif;
   font-size: 17px;
+  font-kerning: normal;
   line-height: 1.72;
   font-variant-numeric: oldstyle-nums proportional-nums;
   text-rendering: optimizeLegibility;
@@ -71,8 +72,44 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
   padding-block: 24px 22px;
+}
+
+.site-identity {
+  align-items: center;
+  display: grid;
+  gap: 17px;
+  grid-template-columns: 52px minmax(0, 1fr);
+  min-width: 0;
+}
+
+.site-identity-copy {
+  min-width: 0;
+}
+
+.brand-mark {
+  align-items: center;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 36% 30%, rgba(255, 255, 255, 0.72), transparent 48%),
+    var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 3px var(--paper),
+    inset 0 0 0 4px rgba(149, 117, 72, 0.42),
+    0 3px 10px rgba(65, 48, 28, 0.09);
+  color: var(--accent-strong);
+  display: flex;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.14rem;
+  font-variant-caps: small-caps;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  width: 52px;
 }
 
 .site-name {
@@ -80,7 +117,7 @@ img {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(2rem, 3.2vw, 2.55rem);
   font-weight: 600;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.028em;
   line-height: 0.95;
 }
 
@@ -114,6 +151,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.14em;
   padding: 5px 0 4px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: border-color 150ms ease, color 150ms ease;
@@ -130,6 +168,17 @@ img {
   font-weight: 600;
 }
 
+.primary-nav a[aria-current="page"]::after {
+  background: var(--gold);
+  bottom: -7px;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 4px;
+}
+
 main.wrap {
   padding-block: clamp(28px, 5vw, 52px) 64px;
 }
@@ -139,6 +188,7 @@ h2,
 h3 {
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
+  font-feature-settings: "kern" 1, "liga" 1;
   font-weight: 600;
   letter-spacing: 0.012em;
   text-wrap: balance;
@@ -168,11 +218,14 @@ a {
   color: var(--accent);
   text-decoration-color: rgba(119, 59, 53, 0.48);
   text-decoration-thickness: 1px;
+  text-decoration-skip-ink: auto;
   text-underline-offset: 3px;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
 }
 
 a:hover {
   color: var(--accent-strong);
+  text-decoration-color: var(--accent);
   text-decoration-thickness: 2px;
 }
 
@@ -221,10 +274,19 @@ summary:focus-visible {
   background: rgba(251, 248, 241, 0.94);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow), inset 0 0 0 4px rgba(165, 140, 104, 0.06);
+  box-shadow: var(--shadow);
   padding: clamp(22px, 3.5vw, 32px);
   position: relative;
   scroll-margin-top: 18px;
+}
+
+.card:not(.reference-card)::before {
+  border: 1px solid rgba(149, 117, 72, 0.15);
+  border-radius: 1px;
+  content: "";
+  inset: 7px;
+  pointer-events: none;
+  position: absolute;
 }
 
 .card:not(.reference-card) {
@@ -235,6 +297,15 @@ summary:focus-visible {
   align-items: center;
   display: flex;
   gap: 13px;
+}
+
+.card:not(.reference-card) > h2::before {
+  background: var(--gold);
+  content: "";
+  flex: 0 0 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  width: 5px;
 }
 
 .card:not(.reference-card) > h2::after {
@@ -367,13 +438,23 @@ summary:focus-visible {
 }
 
 .cv-time {
+  align-items: center;
   color: var(--accent);
+  display: flex;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.08rem;
   font-variant-numeric: lining-nums tabular-nums;
   font-weight: 600;
   letter-spacing: 0.025em;
   line-height: 1.5;
+}
+
+.cv-time::after {
+  background: linear-gradient(90deg, var(--border), transparent);
+  content: "";
+  flex: 1;
+  height: 1px;
+  margin-left: 10px;
 }
 
 .cv-entry-title {
@@ -422,9 +503,20 @@ li::marker {
 }
 
 .year-label {
+  align-items: center;
   color: var(--accent);
+  display: inline-flex;
   font-variant-numeric: lining-nums tabular-nums;
+  gap: 9px;
   padding-top: 2px;
+}
+
+.year-label::after {
+  background: var(--gold);
+  content: "";
+  height: 5px;
+  transform: rotate(45deg);
+  width: 5px;
 }
 
 .topic-index {
@@ -514,6 +606,16 @@ li::marker {
     padding-block: 20px 18px;
   }
 
+  .site-identity {
+    gap: 13px;
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+
+  .brand-mark {
+    font-size: 1.06rem;
+    width: 46px;
+  }
+
   .primary-nav {
     border-left: 0;
     border-top: 1px solid var(--border);
@@ -562,6 +664,20 @@ li::marker {
 @media (max-width: 520px) {
   .card {
     padding: 22px 20px;
+  }
+
+  .card:not(.reference-card)::before {
+    inset: 6px;
+  }
+
+  .site-identity {
+    gap: 12px;
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .brand-mark {
+    font-size: 1rem;
+    width: 42px;
   }
 
   .site-meta {
