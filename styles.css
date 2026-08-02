@@ -1,9 +1,9 @@
 :root {
   --page-width: 1120px;
   --reading-width: 68ch;
-  --font-display: "Libre Caslon Display", "Iowan Old Style", Baskerville, Georgia, serif;
+  --font-display: "Libre Caslon Text", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-text: "Libre Caslon Text", "Iowan Old Style", Baskerville, Georgia, serif;
-  --font-mono: "Courier New", Courier, ui-monospace, monospace;
+  --font-mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
   --ink: #201f1b;
   --muted: #69645b;
   --accent: #1747c7;
@@ -85,22 +85,22 @@ img {
 
 .site-identity::before {
   color: var(--accent);
-  content: "FIELD NOTES / REGENSBURG";
+  content: "Field notes / Regensburg";
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.13em;
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.075em;
   margin-bottom: 7px;
-  text-transform: uppercase;
 }
 
 .site-name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 400;
-  letter-spacing: 0.006em;
-  line-height: 1.04;
+  letter-spacing: -0.005em;
+  line-height: 1.08;
 }
 
 .site-name a {
@@ -111,12 +111,11 @@ img {
 .site-meta {
   margin: 8px 0 0;
   color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.67rem;
-  font-style: normal;
-  letter-spacing: 0.045em;
-  line-height: 1.55;
-  text-transform: uppercase;
+  font-family: var(--font-text);
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.018em;
+  line-height: 1.5;
 }
 
 .primary-nav {
@@ -131,14 +130,14 @@ img {
 .primary-nav a {
   border-bottom: 2px solid transparent;
   color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
+  font-family: var(--font-text);
+  font-size: 0.78rem;
+  font-variant-caps: small-caps;
+  font-weight: 400;
+  letter-spacing: 0.045em;
   padding: 4px 0 5px;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
   transition: border-color 150ms ease, color 150ms ease;
 }
 
@@ -150,7 +149,7 @@ img {
 .primary-nav a[aria-current="page"] {
   border-bottom-color: var(--accent);
   color: var(--accent-strong);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .primary-nav a[aria-current="page"]::after {
@@ -181,8 +180,8 @@ h3 {
 
 h2 {
   margin: 0 0 14px;
-  font-size: clamp(2rem, 3.4vw, 2.5rem);
-  line-height: 1.08;
+  font-size: clamp(1.95rem, 3.2vw, 2.35rem);
+  line-height: 1.12;
 }
 
 h3 {
@@ -226,13 +225,12 @@ summary:focus-visible {
 .section-index {
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.65rem;
   font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.105em;
-  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: 0.065em;
+  line-height: 1.5;
   margin: 0 0 15px;
-  text-transform: uppercase;
 }
 
 .page-intro {
@@ -255,8 +253,9 @@ summary:focus-visible {
 }
 
 .page-intro h2 {
-  font-size: clamp(3rem, 6vw, 4.65rem);
-  line-height: 0.92;
+  font-size: clamp(2.85rem, 5.4vw, 4.1rem);
+  letter-spacing: -0.012em;
+  line-height: 0.98;
   margin-bottom: 10px;
 }
 
@@ -329,9 +328,9 @@ summary:focus-visible {
 }
 
 .home-hero-title {
-  font-size: clamp(3.8rem, 7.4vw, 6.25rem);
-  letter-spacing: -0.03em;
-  line-height: 0.88;
+  font-size: clamp(3.45rem, 6.3vw, 5.35rem);
+  letter-spacing: -0.018em;
+  line-height: 0.95;
   margin: 0;
   text-wrap: initial;
 }
@@ -365,9 +364,8 @@ summary:focus-visible {
 .home-hero-facts dd {
   font-family: var(--font-mono);
   font-size: 0.66rem;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.025em;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .home-hero-facts dt {
@@ -403,10 +401,9 @@ summary:focus-visible {
   font-size: 0.58rem;
   gap: 12px;
   justify-content: space-between;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.025em;
   line-height: 1.45;
   margin-top: 9px;
-  text-transform: uppercase;
 }
 
 .research-plate figcaption span {
@@ -446,8 +443,7 @@ summary:focus-visible {
   font-size: 0.68rem;
   font-variant-caps: normal;
   font-weight: 700;
-  letter-spacing: 0.065em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .contact-list dd,
@@ -517,9 +513,8 @@ summary:focus-visible {
   font-style: normal;
   gap: 8px;
   line-height: 1.45;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   margin-top: 9px;
-  text-transform: uppercase;
 }
 
 .figure-caption::before {
@@ -567,9 +562,8 @@ summary:focus-visible {
   font-size: 0.7rem;
   font-variant-numeric: lining-nums tabular-nums;
   font-weight: 700;
-  letter-spacing: 0.045em;
+  letter-spacing: 0.02em;
   line-height: 1.5;
-  text-transform: uppercase;
 }
 
 .cv-time::after {
@@ -634,7 +628,7 @@ li::marker {
   font-variant-numeric: lining-nums tabular-nums;
   font-weight: 700;
   gap: 9px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   padding-top: 2px;
 }
 
@@ -709,10 +703,9 @@ li::marker {
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.025em;
   padding-bottom: 34px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .site-footer::before {
@@ -762,7 +755,7 @@ li::marker {
   }
 
   .home-hero-title {
-    font-size: clamp(3.5rem, 13vw, 5rem);
+    font-size: clamp(3.25rem, 11vw, 4.4rem);
   }
 
   .research-plate {
@@ -820,11 +813,15 @@ li::marker {
   }
 
   .site-meta {
-    font-size: 0.64rem;
+    font-size: 0.76rem;
   }
 
   .home-hero-title {
-    font-size: clamp(3.15rem, 16vw, 4.3rem);
+    font-size: clamp(3.05rem, 13.2vw, 3.75rem);
+  }
+
+  .page-intro h2 {
+    font-size: clamp(2.65rem, 12vw, 3.2rem);
   }
 
   .home-hero-facts {
