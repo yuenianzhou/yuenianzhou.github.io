@@ -327,6 +327,10 @@ summary:focus-visible {
   max-width: 660px;
 }
 
+.profile-hero .home-hero-copy {
+  padding-block: clamp(4px, 2vw, 22px);
+}
+
 .home-hero-title {
   font-size: clamp(3.45rem, 6.3vw, 5.35rem);
   letter-spacing: -0.018em;
@@ -345,6 +349,17 @@ summary:focus-visible {
   line-height: 1.65;
   margin: clamp(28px, 4vw, 42px) 0 0;
   max-width: 46ch;
+}
+
+.profile-hero-prose {
+  font-size: clamp(1rem, 1.45vw, 1.08rem);
+  line-height: 1.72;
+  margin-top: clamp(26px, 3.5vw, 38px);
+  max-width: 57ch;
+}
+
+.profile-hero-prose strong {
+  font-weight: 700;
 }
 
 .home-hero-facts {
@@ -378,6 +393,27 @@ summary:focus-visible {
   margin-top: 4px;
 }
 
+.profile-contacts {
+  align-items: start;
+}
+
+.profile-contacts div:first-child {
+  flex: 1 1 285px;
+}
+
+.profile-contacts div:last-child {
+  flex: 0 1 130px;
+}
+
+.profile-contacts dd {
+  font-size: 0.7rem;
+  overflow-wrap: anywhere;
+}
+
+.profile-contacts a {
+  text-decoration-thickness: 1px;
+}
+
 .research-plate {
   margin: 0;
   min-width: 0;
@@ -392,6 +428,10 @@ summary:focus-visible {
   filter: contrast(0.98) saturate(0.96);
   height: auto;
   width: 100%;
+}
+
+.profile-plate img {
+  box-shadow: 10px 12px 0 rgba(71, 68, 61, 0.055);
 }
 
 .research-plate figcaption {
@@ -417,7 +457,7 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 2fr) minmax(270px, 0.82fr);
   column-gap: clamp(36px, 6vw, 72px);
   row-gap: clamp(44px, 6vw, 68px);
-  padding-top: 8px;
+  padding-top: clamp(48px, 7vw, 76px);
 }
 
 .research-card {
@@ -828,6 +868,10 @@ li::marker {
     display: grid;
     gap: 18px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-contacts {
+    grid-template-columns: 1fr;
   }
 
   .home-hero-facts div {
