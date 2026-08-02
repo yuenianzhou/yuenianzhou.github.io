@@ -1,9 +1,9 @@
 :root {
   --page-width: 1120px;
   --reading-width: 68ch;
-  --font-display: "Libre Caslon Text", "Iowan Old Style", Baskerville, Georgia, serif;
-  --font-text: "Libre Caslon Text", "Iowan Old Style", Baskerville, Georgia, serif;
-  --font-mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
+  --font-display: "IM Fell English", "Iowan Old Style", Baskerville, Georgia, serif;
+  --font-text: "EB Garamond", "Iowan Old Style", Baskerville, Georgia, serif;
+  --font-mono: "IM Fell English SC", "Iowan Old Style", Baskerville, Georgia, serif;
   --ink: #201f1b;
   --muted: #69645b;
   --accent: #1747c7;
