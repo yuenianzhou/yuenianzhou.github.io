@@ -4,16 +4,17 @@
   --font-display: "IM Fell English", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-text: "EB Garamond", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-mono: "IM Fell English SC", "Iowan Old Style", Baskerville, Georgia, serif;
-  --ink: #201f1b;
-  --muted: #69645b;
-  --accent: #1747c7;
-  --accent-strong: #0d318f;
-  --accent-soft: #dce5ff;
-  --canvas: #d9d2c6;
-  --paper: #f5f0e5;
-  --paper-deep: #eae2d5;
-  --border: #bdb4a6;
-  --rule: #47443d;
+  --ink: #24211d;
+  --muted: #6b655b;
+  --accent: #173d99;
+  --accent-strong: #102b68;
+  --accent-muted: #586887;
+  --accent-soft: #d9e1f4;
+  --canvas: #e2dbce;
+  --paper: #f3ede1;
+  --paper-deep: #e8dfd1;
+  --border: #b8afa0;
+  --rule: #4b463d;
   --shadow: none;
   --radius: 0;
 }
@@ -36,16 +37,19 @@ body {
   margin: 0;
   background-color: var(--canvas);
   background-image:
-    radial-gradient(circle at 14% -8%, rgba(255, 255, 255, 0.48), transparent 36rem),
-    repeating-linear-gradient(0deg, rgba(43, 39, 31, 0.012) 0 1px, transparent 1px 5px),
-    radial-gradient(rgba(54, 49, 39, 0.055) 0.55px, transparent 0.7px);
-  background-size: auto, auto, 6px 6px;
+    radial-gradient(circle at 14% -8%, rgba(255, 255, 255, 0.52), transparent 36rem),
+    radial-gradient(circle at 82% 34%, rgba(255, 251, 240, 0.16), transparent 29rem),
+    repeating-linear-gradient(0deg, rgba(43, 39, 31, 0.009) 0 1px, transparent 1px 5px),
+    radial-gradient(rgba(54, 49, 39, 0.045) 0.5px, transparent 0.7px);
+  background-size: auto, auto, auto, 6px 6px;
   color: var(--ink);
   font-family: var(--font-text);
   font-size: 18px;
   font-kerning: normal;
   line-height: 1.72;
   font-variant-numeric: oldstyle-nums proportional-nums;
+  min-height: 100vh;
+  position: relative;
   text-rendering: optimizeLegibility;
 }
 
@@ -64,8 +68,12 @@ img {
   padding-inline: clamp(20px, 4vw, 32px);
 }
 
+.outer-folio {
+  display: none;
+}
+
 .site-header {
-  background-color: rgba(217, 210, 198, 0.94);
+  background-color: rgba(226, 219, 206, 0.95);
   background-image:
     repeating-linear-gradient(0deg, rgba(43, 39, 31, 0.01) 0 1px, transparent 1px 5px),
     radial-gradient(rgba(54, 49, 39, 0.04) 0.5px, transparent 0.7px);
@@ -179,7 +187,7 @@ h3 {
   font-feature-settings: "kern" 1, "liga" 1;
   font-weight: 400;
   letter-spacing: 0;
-  text-shadow: 0.012em 0.018em 0 rgba(32, 31, 27, 0.055);
+  text-shadow: 0.008em 0.012em 0 rgba(36, 33, 29, 0.04);
   text-wrap: balance;
 }
 
@@ -204,8 +212,8 @@ p:last-child {
 }
 
 a {
-  color: var(--accent);
-  text-decoration-color: rgba(23, 71, 199, 0.42);
+  color: var(--ink);
+  text-decoration-color: rgba(23, 61, 153, 0.38);
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: auto;
   text-underline-offset: 3px;
@@ -215,7 +223,7 @@ a {
 a:hover {
   color: var(--accent-strong);
   text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1.5px;
 }
 
 a:focus-visible,
@@ -235,6 +243,7 @@ summary:focus-visible {
   font-size: 0.65rem;
   font-style: normal;
   font-weight: 400;
+  gap: 9px;
   letter-spacing: 0.065em;
   line-height: 1.5;
   margin: 0 0 15px;
@@ -313,9 +322,9 @@ summary:focus-visible {
 .card:not(.reference-card) > h2::before {
   background: var(--accent);
   content: "";
-  flex: 0 0 18px;
-  height: 4px;
-  width: 18px;
+  flex: 0 0 16px;
+  height: 3px;
+  width: 16px;
 }
 
 .card:not(.reference-card) > h2::after {
@@ -387,7 +396,7 @@ summary:focus-visible {
 }
 
 .profile-hero-prose strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .home-hero-facts {
@@ -435,7 +444,7 @@ summary:focus-visible {
 
 .profile-contacts dd {
   font-family: var(--font-text);
-  font-size: 0.98rem;
+  font-size: 1rem;
   letter-spacing: 0.005em;
   line-height: 1.4;
   overflow-wrap: anywhere;
@@ -473,7 +482,7 @@ summary:focus-visible {
 .profile-plate {
   isolation: isolate;
   position: relative;
-  transform: rotate(0.3deg);
+  transform: rotate(0.12deg);
 }
 
 .profile-plate::before {
@@ -498,7 +507,7 @@ summary:focus-visible {
   position: absolute;
   right: -5px;
   top: 61%;
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
   width: 13px;
   z-index: 2;
 }
@@ -554,10 +563,7 @@ summary:focus-visible {
 }
 
 .research-card > h2::before {
-  display: block;
-  height: 5px;
-  margin: 12px 0 19px;
-  width: 28px;
+  display: none;
 }
 
 .research-card > h2::after {
@@ -567,7 +573,7 @@ summary:focus-visible {
 .research-card .prose {
   border-left: 1px solid var(--border);
   grid-area: prose;
-  max-width: none;
+  max-width: 62ch;
   padding-left: clamp(28px, 4vw, 52px);
   position: relative;
 }
@@ -669,9 +675,10 @@ summary:focus-visible {
 .figure-pair {
   align-items: start;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 245px));
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   justify-content: start;
-  gap: clamp(24px, 5vw, 52px);
+  gap: clamp(26px, 4vw, 42px);
+  max-width: 640px;
 }
 
 .figure {
@@ -682,12 +689,12 @@ summary:focus-visible {
 }
 
 .figure:first-child {
-  margin-top: 30px;
-  transform: rotate(-0.65deg);
+  margin-top: 38px;
+  transform: rotate(-0.28deg);
 }
 
 .figure:last-child {
-  transform: rotate(0.5deg);
+  transform: rotate(0.2deg);
 }
 
 .figure img {
@@ -731,8 +738,29 @@ summary:focus-visible {
 }
 
 .cv-stack {
+  counter-reset: cv-section;
   display: grid;
   gap: clamp(38px, 5vw, 56px);
+}
+
+.cv-stack > .card {
+  counter-increment: cv-section;
+}
+
+.cv-stack > .card > h2::before {
+  align-self: center;
+  background: none;
+  color: var(--accent);
+  content: counter(cv-section, decimal-leading-zero);
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  margin-top: 0.3em;
+  width: auto;
 }
 
 .cv-list {
@@ -779,7 +807,7 @@ summary:focus-visible {
 }
 
 .cv-entry-title {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .cv-entry-body p {
@@ -804,7 +832,7 @@ li {
 }
 
 li::marker {
-  color: var(--accent);
+  color: var(--accent-muted);
 }
 
 .year-groups {
@@ -853,6 +881,20 @@ li::marker {
   margin-bottom: 14px;
 }
 
+.card.topic-index > h2::before {
+  align-self: center;
+  background: none;
+  color: var(--accent);
+  content: "INDEX";
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  height: auto;
+  letter-spacing: 0.06em;
+  margin-top: 0.25em;
+  width: auto;
+}
+
 .topic-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -868,6 +910,7 @@ li::marker {
 .references-grid {
   columns: 2 420px;
   column-gap: 32px;
+  counter-reset: reference;
 }
 
 .reference-card {
@@ -879,13 +922,25 @@ li::marker {
   box-shadow: none;
   margin: 0 0 36px;
   padding: 20px 3px 3px;
+  counter-increment: reference;
 }
 
 .reference-card .section-title {
-  color: var(--accent-strong);
+  color: var(--ink);
   font-size: clamp(1.55rem, 2.7vw, 1.85rem);
   line-height: 1.15;
   margin-bottom: 12px;
+}
+
+.reference-card .section-title::before {
+  color: var(--accent);
+  content: counter(reference, decimal-leading-zero) " /";
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  margin-bottom: 7px;
 }
 
 .reference-card .small {
@@ -904,20 +959,47 @@ li::marker {
 }
 
 .site-footer {
+  border-top: 1px solid var(--rule);
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  letter-spacing: 0.025em;
-  padding-bottom: 34px;
-  text-align: center;
+  letter-spacing: 0.045em;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.site-footer::before {
+.site-footer-inner {
+  align-items: baseline;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-block: 17px 28px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer span {
   color: var(--accent);
-  content: "//";
-  display: block;
-  font-size: 0.72rem;
-  margin-bottom: 7px;
+}
+
+@media (min-width: 1260px) {
+  .outer-folio {
+    color: var(--accent-muted);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.54rem;
+    left: max(20px, calc((100vw - 1240px) / 2));
+    letter-spacing: 0.075em;
+    opacity: 0.82;
+    pointer-events: none;
+    position: absolute;
+    top: 198px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1029,6 +1111,10 @@ li::marker {
     margin-top: 0;
   }
 
+  .figure-pair {
+    max-width: 600px;
+  }
+
   .cv-entry,
   .year-group {
     grid-template-columns: 1fr;
@@ -1047,6 +1133,12 @@ li::marker {
 
   .references-grid {
     columns: 1;
+  }
+
+  .site-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 
