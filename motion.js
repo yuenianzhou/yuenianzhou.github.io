@@ -80,10 +80,33 @@ if (prefersReducedMotion.matches) {
     });
   };
 
-  revealOnView(".page-home .research-card", 0.18);
   revealOnView(".page-cv .cv-stack > .card", 0.12);
   revealOnView(".page-links .topic-index", 0.12);
   revealOnView(".page-links .reference-card", 0.1);
+
+  const researchCard = document.querySelector(".page-home .research-card");
+
+  if (researchCard) {
+    inView(
+      researchCard,
+      () => {
+        const researchItems = researchCard.querySelectorAll(
+          ".section-index, h2, .prose > p, .research-index > li"
+        );
+
+        animate(
+          researchItems,
+          { opacity: [0, 1], y: [14, 0] },
+          {
+            duration: 0.66,
+            delay: stagger(0.045),
+            ease: calmEase,
+          }
+        );
+      },
+      { amount: 0.16, margin: "0px 0px -7% 0px" }
+    );
+  }
 
   const visualNotes = document.querySelector(".visual-notes");
 
@@ -115,7 +138,7 @@ if (prefersReducedMotion.matches) {
   if (profileImage && profileHero && window.innerWidth > 760) {
     const plateDrift = animate(
       profileImage,
-      { y: [-5, 9], scale: [1.006, 1.006] },
+      { y: [-4, 7], scale: [1.004, 1.004] },
       { ease: "linear" }
     );
 
@@ -132,8 +155,8 @@ if (prefersReducedMotion.matches) {
         const liftPlate = () => {
           animate(
             plateLink,
-            { y: -3, scale: 1.004 },
-            { type: "spring", stiffness: 210, damping: 27 }
+            { y: -3, scale: 1.003 },
+            { duration: 0.28, ease: calmEase }
           );
         };
 
@@ -141,7 +164,7 @@ if (prefersReducedMotion.matches) {
           animate(
             plateLink,
             { y: 0, scale: 1 },
-            { type: "spring", stiffness: 170, damping: 26 }
+            { duration: 0.34, ease: calmEase }
           );
         };
 

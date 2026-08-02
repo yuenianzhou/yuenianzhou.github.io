@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-02T18:37:46+02:00",
+  "title": "Design System: Yuenian Zhou Academic Homepage",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Printer's Ink",
+        "canonical": "#24211d",
+        "tonalRamp": ["color-mix(in oklch, #24211d 35%, black)", "color-mix(in oklch, #24211d 50%, black)", "color-mix(in oklch, #24211d 70%, black)", "color-mix(in oklch, #24211d 85%, black)", "#24211d", "color-mix(in oklch, #24211d 70%, white)", "color-mix(in oklch, #24211d 45%, white)", "color-mix(in oklch, #24211d 20%, white)"]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Aged Annotation Ink",
+        "canonical": "#6b655b",
+        "tonalRamp": ["color-mix(in oklch, #6b655b 35%, black)", "color-mix(in oklch, #6b655b 50%, black)", "color-mix(in oklch, #6b655b 70%, black)", "color-mix(in oklch, #6b655b 85%, black)", "#6b655b", "color-mix(in oklch, #6b655b 70%, white)", "color-mix(in oklch, #6b655b 45%, white)", "color-mix(in oklch, #6b655b 20%, white)"]
+      },
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Registration Cobalt",
+        "canonical": "#173d99",
+        "tonalRamp": ["color-mix(in oklch, #173d99 35%, black)", "color-mix(in oklch, #173d99 50%, black)", "color-mix(in oklch, #173d99 70%, black)", "color-mix(in oklch, #173d99 85%, black)", "#173d99", "color-mix(in oklch, #173d99 70%, white)", "color-mix(in oklch, #173d99 45%, white)", "color-mix(in oklch, #173d99 20%, white)"]
+      },
+      "cobalt-deep": {
+        "role": "primary",
+        "displayName": "Deep Cobalt Ink",
+        "canonical": "#102b68",
+        "tonalRamp": ["color-mix(in oklch, #102b68 35%, black)", "color-mix(in oklch, #102b68 50%, black)", "color-mix(in oklch, #102b68 70%, black)", "color-mix(in oklch, #102b68 85%, black)", "#102b68", "color-mix(in oklch, #102b68 70%, white)", "color-mix(in oklch, #102b68 45%, white)", "color-mix(in oklch, #102b68 20%, white)"]
+      },
+      "cobalt-muted": {
+        "role": "primary",
+        "displayName": "Faded Cobalt Note",
+        "canonical": "#586887",
+        "tonalRamp": ["color-mix(in oklch, #586887 35%, black)", "color-mix(in oklch, #586887 50%, black)", "color-mix(in oklch, #586887 70%, black)", "color-mix(in oklch, #586887 85%, black)", "#586887", "color-mix(in oklch, #586887 70%, white)", "color-mix(in oklch, #586887 45%, white)", "color-mix(in oklch, #586887 20%, white)"]
+      },
+      "cobalt-wash": {
+        "role": "primary",
+        "displayName": "Cobalt Wash",
+        "canonical": "#d9e1f4",
+        "tonalRamp": ["color-mix(in oklch, #d9e1f4 35%, black)", "color-mix(in oklch, #d9e1f4 50%, black)", "color-mix(in oklch, #d9e1f4 70%, black)", "color-mix(in oklch, #d9e1f4 85%, black)", "#d9e1f4", "color-mix(in oklch, #d9e1f4 70%, white)", "color-mix(in oklch, #d9e1f4 45%, white)", "color-mix(in oklch, #d9e1f4 20%, white)"]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Bookcloth Canvas",
+        "canonical": "#e2dbce",
+        "tonalRamp": ["color-mix(in oklch, #e2dbce 35%, black)", "color-mix(in oklch, #e2dbce 50%, black)", "color-mix(in oklch, #e2dbce 70%, black)", "color-mix(in oklch, #e2dbce 85%, black)", "#e2dbce", "color-mix(in oklch, #e2dbce 70%, white)", "color-mix(in oklch, #e2dbce 45%, white)", "color-mix(in oklch, #e2dbce 20%, white)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Ivory Leaf",
+        "canonical": "#f3ede1",
+        "tonalRamp": ["color-mix(in oklch, #f3ede1 35%, black)", "color-mix(in oklch, #f3ede1 50%, black)", "color-mix(in oklch, #f3ede1 70%, black)", "color-mix(in oklch, #f3ede1 85%, black)", "#f3ede1", "color-mix(in oklch, #f3ede1 70%, white)", "color-mix(in oklch, #f3ede1 45%, white)", "color-mix(in oklch, #f3ede1 20%, white)"]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deep Paper Fold",
+        "canonical": "#e8dfd1",
+        "tonalRamp": ["color-mix(in oklch, #e8dfd1 35%, black)", "color-mix(in oklch, #e8dfd1 50%, black)", "color-mix(in oklch, #e8dfd1 70%, black)", "color-mix(in oklch, #e8dfd1 85%, black)", "#e8dfd1", "color-mix(in oklch, #e8dfd1 70%, white)", "color-mix(in oklch, #e8dfd1 45%, white)", "color-mix(in oklch, #e8dfd1 20%, white)"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Pencil Border",
+        "canonical": "#b8afa0",
+        "tonalRamp": ["color-mix(in oklch, #b8afa0 35%, black)", "color-mix(in oklch, #b8afa0 50%, black)", "color-mix(in oklch, #b8afa0 70%, black)", "color-mix(in oklch, #b8afa0 85%, black)", "#b8afa0", "color-mix(in oklch, #b8afa0 70%, white)", "color-mix(in oklch, #b8afa0 45%, white)", "color-mix(in oklch, #b8afa0 20%, white)"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Printer's Rule",
+        "canonical": "#4b463d",
+        "tonalRamp": ["color-mix(in oklch, #4b463d 35%, black)", "color-mix(in oklch, #4b463d 50%, black)", "color-mix(in oklch, #4b463d 70%, black)", "color-mix(in oklch, #4b463d 85%, black)", "#4b463d", "color-mix(in oklch, #4b463d 70%, white)", "color-mix(in oklch, #4b463d 45%, white)", "color-mix(in oklch, #4b463d 20%, white)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Old-Print Display",
+        "purpose": "The site name, hero thesis, and major editorial headings."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Section and page headings below the hero."
+      },
+      "body": {
+        "displayName": "Garamond Reading Text",
+        "purpose": "Biography, research prose, CV entries, and reference text."
+      },
+      "label": {
+        "displayName": "Archival Small Caps",
+        "purpose": "Folio indices, navigation, field labels, and plate captions."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "calm-reveal",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1), 560–760ms",
+        "purpose": "Page entrances and single-pass section reveals."
+      },
+      {
+        "name": "plate-hover",
+        "value": "translateY(-3px) scale(1.003), 280ms",
+        "purpose": "A quiet lift on archival plates for fine pointers and keyboard focus."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "520px"
+      },
+      {
+        "name": "single-column",
+        "value": "760px"
+      },
+      {
+        "name": "outer-folio",
+        "value": "1260px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "A small-cap text link with a restrained cobalt current-page mark.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">HOMEPAGE</a>",
+      "css": ".ds-nav-link { color:#6b655b; display:inline-block; font-family:'EB Garamond',Georgia,serif; font-variant-caps:small-caps; font-size:.78rem; letter-spacing:.045em; padding:4px 0 5px; text-decoration:none; border-bottom:2px solid transparent; transition:color 150ms ease,border-color 150ms ease; } .ds-nav-link:hover,.ds-nav-link:focus-visible { color:#102b68; border-bottom-color:#173d99; outline:3px solid rgba(23,71,199,.24); outline-offset:3px; }"
+    },
+    {
+      "name": "Research Index Line",
+      "kind": "custom",
+      "description": "One complete research topic on a ruled line with a cobalt registration diamond.",
+      "html": "<div class=\"ds-research-line\"><i aria-hidden=\"true\"></i><span>ℓ-adic and p-adic local systems</span></div>",
+      "css": ".ds-research-line { align-items:baseline; border-bottom:1px solid #b8afa0; color:#24211d; display:grid; font-family:'EB Garamond',Georgia,serif; font-size:1.02rem; gap:12px; grid-template-columns:8px minmax(0,1fr); line-height:1.45; padding:.48rem 0 .52rem; } .ds-research-line i { background:#173d99; display:block; height:4px; transform:rotate(45deg); width:4px; }"
+    },
+    {
+      "name": "Plate Caption",
+      "kind": "custom",
+      "description": "A compact catalogue caption that pairs a cobalt plate number with muted metadata.",
+      "html": "<p class=\"ds-plate-caption\"><strong>PLATE 03</strong><span>CRYSTAL / ISOCRYSTAL STUDY</span></p>",
+      "css": ".ds-plate-caption { color:#6b655b; display:flex; flex-wrap:wrap; font-family:'IM Fell English SC',Georgia,serif; font-size:.61rem; gap:8px; letter-spacing:.025em; line-height:1.45; margin:0; } .ds-plate-caption strong { color:#173d99; font-weight:700; }"
+    },
+    {
+      "name": "Contact Field",
+      "kind": "custom",
+      "description": "A readable personal fact beneath a small archival field label.",
+      "html": "<div class=\"ds-contact\"><strong>EMAIL</strong><a href=\"mailto:yuenian.zhou@mathematik.uni-regensburg.de\">yuenian.zhou@mathematik.uni-regensburg.de</a></div>",
+      "css": ".ds-contact { border-top:1px solid #b8afa0; color:#24211d; display:grid; font-family:'EB Garamond',Georgia,serif; gap:4px; padding-top:9px; } .ds-contact strong { color:#173d99; font-family:'IM Fell English SC',Georgia,serif; font-size:.76rem; letter-spacing:.05em; } .ds-contact a { color:#24211d; font-size:1.08rem; overflow-wrap:anywhere; text-decoration-color:rgba(23,61,153,.38); text-underline-offset:3px; }"
+    },
+    {
+      "name": "Keyboard Skip Link",
+      "kind": "custom",
+      "refersTo": "skip-link",
+      "description": "An off-canvas ivory paper link that becomes visible on keyboard focus.",
+      "html": "<a class=\"ds-skip-link\" href=\"#main\">SKIP TO MAIN CONTENT</a>",
+      "css": ".ds-skip-link { background:#f3ede1; border:1px solid #4b463d; color:#24211d; font-family:'EB Garamond',Georgia,serif; left:20px; padding:8px 12px; position:fixed; top:16px; transform:translateY(-180%); transition:transform 180ms ease; } .ds-skip-link:focus { transform:translateY(0); outline:3px solid rgba(23,71,199,.24); outline-offset:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scholar's Field Folio",
+    "overview": "The homepage should feel like a carefully handled page from an old mathematical field notebook: scholarly, quiet, tactile, and precise. Its visual authority comes from classical book typography, aged-paper surfaces, hairline rules, archival labels, and real image plates rather than modern interface decoration. The page combines old-book printing with a restrained Japanese/Korean zine sensibility. Large areas of calm paper allow the text and small cobalt annotations to carry weight. The result should feel designed and personal without becoming theatrical, nostalgic pastiche, or a generic portfolio template.",
+    "keyCharacteristics": [
+      "Classical serif hierarchy with generous reading measure and deliberate line breaks.",
+      "Warm paper and warm-black ink; never clinical white or pure digital black.",
+      "Cobalt appears as a rare registration mark, active state, or image-plane accent.",
+      "Flat editorial composition using rules, columns, folios, and captions instead of cards.",
+      "Archival image plates remain fully visible and materially integrated with the paper.",
+      "Motion is quiet, brief, and subordinate to reading."
+    ],
+    "rules": [
+      {
+        "name": "The Cobalt Annotation Rule",
+        "body": "Cobalt is an annotation, not a fill color. Keep it rare enough that every occurrence reads as intentional.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Ink Rule",
+        "body": "Use warm ink and paper neutrals; avoid pure black, pure white, gray SaaS surfaces, gradients, and multicolor decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Printed Hierarchy Rule",
+        "body": "Create emphasis with face, scale, italic, and placement. Do not use modern sans-serif display type, heavy geometric weights, or oversized headings above 6rem.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Folio Rule",
+        "body": "A new block earns separation through spacing, a hairline rule, or a change in column structure—not a rounded container or shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Complete Plate Rule",
+        "body": "Display archival images at their natural aspect ratio. Never crop mathematical diagrams, music, labels, or generated plate compositions merely to force equal heights.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve the old-book, academic archive, and minimal-zine identity when refining the site.",
+      "Do let typography, whitespace, rules, and real plate imagery carry the composition.",
+      "Do keep research topics on separate readable lines, including ℓ-independence and p-adic Hodge theory.",
+      "Do use one authored entrance sequence, quiet scroll reveals, transform/opacity animation, and reduced-motion support.",
+      "Do check desktop and narrow mobile layouts with the real biography, email, mathematics, and images."
+    ],
+    "donts": [
+      "Don't introduce SaaS cards, pills, glassmorphism, purple gradients, generic sans-serif type, or ornamental icon tiles.",
+      "Don't crop archival images to equal heights or hide their meaningful text and diagrams.",
+      "Don't turn cobalt into a broad background color or add competing accent hues.",
+      "Don't scatter bouncing, elastic, looping, or attention-seeking motion across the page.",
+      "Don't rewrite factual biography, research, teaching, or event information merely for visual balance."
+    ]
+  }
+}

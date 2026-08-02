@@ -39,12 +39,12 @@ body {
   background-image:
     radial-gradient(circle at 14% -8%, rgba(255, 255, 255, 0.52), transparent 36rem),
     radial-gradient(circle at 82% 34%, rgba(255, 251, 240, 0.16), transparent 29rem),
-    repeating-linear-gradient(0deg, rgba(43, 39, 31, 0.009) 0 1px, transparent 1px 5px),
     radial-gradient(rgba(54, 49, 39, 0.045) 0.5px, transparent 0.7px);
-  background-size: auto, auto, auto, 6px 6px;
+  background-size: auto, auto, 6px 6px;
   color: var(--ink);
   font-family: var(--font-text);
   font-size: 18px;
+  font-optical-sizing: auto;
   font-kerning: normal;
   line-height: 1.72;
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -62,6 +62,23 @@ img {
   max-width: 100%;
 }
 
+.skip-link {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  left: 20px;
+  padding: 8px 12px;
+  position: fixed;
+  top: 16px;
+  transform: translateY(-180%);
+  transition: transform 180ms ease;
+  z-index: 20;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .wrap {
   width: min(100%, var(--page-width));
   margin: 0 auto;
@@ -74,10 +91,8 @@ img {
 
 .site-header {
   background-color: rgba(226, 219, 206, 0.95);
-  background-image:
-    repeating-linear-gradient(0deg, rgba(43, 39, 31, 0.01) 0 1px, transparent 1px 5px),
-    radial-gradient(rgba(54, 49, 39, 0.04) 0.5px, transparent 0.7px);
-  background-size: auto, 6px 6px;
+  background-image: radial-gradient(rgba(54, 49, 39, 0.04) 0.5px, transparent 0.7px);
+  background-size: 6px 6px;
   border-bottom: 1px solid var(--rule);
   border-top: 0;
   box-shadow: none;
@@ -189,6 +204,7 @@ h3 {
   letter-spacing: 0;
   text-shadow: 0.008em 0.012em 0 rgba(36, 33, 29, 0.04);
   text-wrap: balance;
+  scroll-margin-top: 24px;
 }
 
 h2 {
@@ -213,10 +229,12 @@ p:last-child {
 
 a {
   color: var(--ink);
+  -webkit-tap-highlight-color: rgba(23, 61, 153, 0.16);
   text-decoration-color: rgba(23, 61, 153, 0.38);
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: auto;
   text-underline-offset: 3px;
+  touch-action: manipulation;
   transition: color 150ms ease, text-decoration-color 150ms ease;
 }
 
@@ -393,6 +411,7 @@ summary:focus-visible {
   line-height: 1.68;
   margin-top: clamp(26px, 3.5vw, 38px);
   max-width: 57ch;
+  text-wrap: pretty;
 }
 
 .profile-hero-prose strong {
@@ -444,14 +463,14 @@ summary:focus-visible {
 
 .profile-contacts dd {
   font-family: var(--font-text);
-  font-size: 1rem;
+  font-size: 1.08rem;
   letter-spacing: 0.005em;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
 .profile-contacts dt {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   letter-spacing: 0.05em;
 }
 
@@ -576,6 +595,7 @@ summary:focus-visible {
   max-width: 62ch;
   padding-left: clamp(28px, 4vw, 52px);
   position: relative;
+  text-wrap: pretty;
 }
 
 .research-card .prose::before {
@@ -588,6 +608,35 @@ summary:focus-visible {
   position: absolute;
   right: 0;
   top: -27px;
+}
+
+.research-index {
+  border-top: 1px solid var(--border);
+  list-style: none;
+  margin: 1.45rem 0 1.55rem;
+  padding: 0;
+}
+
+.research-index li {
+  align-items: baseline;
+  border-bottom: 1px solid rgba(184, 175, 160, 0.72);
+  display: grid;
+  font-size: 1.02rem;
+  gap: 12px;
+  grid-template-columns: 8px minmax(0, 1fr);
+  letter-spacing: 0.004em;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0.48rem 0 0.52rem;
+}
+
+.research-index li::before {
+  background: var(--accent);
+  content: "";
+  height: 4px;
+  margin-top: 0.2em;
+  transform: rotate(45deg);
+  width: 4px;
 }
 
 .section-index {
@@ -675,10 +724,10 @@ summary:focus-visible {
 .figure-pair {
   align-items: start;
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.64fr);
   justify-content: start;
   gap: clamp(26px, 4vw, 42px);
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .figure {
@@ -697,6 +746,12 @@ summary:focus-visible {
   transform: rotate(0.2deg);
 }
 
+.figure--portrait {
+  justify-self: end;
+  max-width: 248px;
+  width: 100%;
+}
+
 .figure img {
   background: transparent;
   border: 0;
@@ -711,8 +766,9 @@ summary:focus-visible {
   width: 100%;
 }
 
-.figure:last-child img {
-  filter: grayscale(0.82) sepia(0.06) saturate(0.72) contrast(0.94);
+.figure--portrait img {
+  filter: contrast(0.95) saturate(0.98);
+  opacity: 0.95;
 }
 
 .figure-caption {
@@ -1115,6 +1171,10 @@ li::marker {
     max-width: 600px;
   }
 
+  .figure--portrait {
+    max-width: 220px;
+  }
+
   .cv-entry,
   .year-group {
     grid-template-columns: 1fr;
@@ -1198,6 +1258,11 @@ li::marker {
 
   .figure-pair {
     grid-template-columns: minmax(0, 280px);
+  }
+
+  .figure--portrait {
+    justify-self: center;
+    max-width: 280px;
   }
 
   .topic-list {
