@@ -417,7 +417,7 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 2fr) minmax(270px, 0.82fr);
   column-gap: clamp(36px, 6vw, 72px);
   row-gap: clamp(44px, 6vw, 68px);
-  padding-top: clamp(48px, 7vw, 76px);
+  padding-top: 8px;
 }
 
 .research-card {
