@@ -19,7 +19,7 @@
 
   <!-- Fonts and shared styles -->
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=personal-20260802">
+  <link rel="stylesheet" href="styles.css?v=editorial-profile-20260802">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -54,11 +54,11 @@
   </header>
 
   <main class="wrap home-main">
-    <div class="home-editorial-grid">
-      <section class="card about-card">
-        <p class="section-index">01 / Biographical note</p>
-        <h2>About me</h2>
-        <div class="prose">
+    <section class="home-hero profile-hero" aria-labelledby="profile-heading">
+      <div class="home-hero-copy">
+        <p class="editorial-label">Profile / 01</p>
+        <h2 id="profile-heading" class="home-hero-title">About<br><em>me.</em></h2>
+        <div class="profile-hero-prose">
           <p><strong>I’m Yuenian Zhou (周越年)</strong>, a Ph.D. candidate in mathematics and an associated member of
             <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Main_Page" target="_blank" rel="noopener">SFB 1085 “Higher Invariants”</a>
             at <a href="https://www.uni-regensburg.de/" target="_blank" rel="noopener">Universität Regensburg</a> (Germany) since 2024, supervised by
@@ -71,21 +71,35 @@
             <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a> in China.
           </p>
         </div>
-      </section>
-
-      <aside class="card contact-card" aria-labelledby="contact-heading">
-        <p class="section-index">02 / Coordinates</p>
-        <h2 id="contact-heading">Contact</h2>
-        <dl class="contact-list">
-          <dt>Email</dt>
-          <dd><a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@<wbr>mathematik.<wbr><span class="email-domain">uni-regensburg.de</span></a></dd>
-          <dt>Office</dt>
-          <dd>M 005</dd>
+        <dl class="home-hero-facts profile-contacts">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:yuenian.zhou@mathematik.uni-regensburg.de">yuenian.zhou@<wbr>mathematik.<wbr><span class="email-domain">uni-regensburg.de</span></a></dd>
+          </div>
+          <div>
+            <dt>Office</dt>
+            <dd>M 005</dd>
+          </div>
         </dl>
-      </aside>
+      </div>
 
+      <figure class="research-plate profile-plate">
+        <a href="assets/research-zine-plate.jpg" target="_blank" rel="noopener">
+          <img
+            src="assets/research-zine-plate.jpg"
+            alt="An archival-style geometric study on aged paper."
+            width="971"
+            height="1619"
+            fetchpriority="high"
+          >
+        </a>
+        <figcaption><span>Plate 01</span> archival study</figcaption>
+      </figure>
+    </section>
+
+    <div class="home-editorial-grid">
       <section class="card research-card">
-        <p class="section-index">03 / Current questions</p>
+        <p class="section-index">02 / Current questions</p>
         <h2>Research interests</h2>
         <div class="prose">
           <p>
@@ -106,7 +120,7 @@
 
     <section class="visual-notes" aria-labelledby="visual-notes-heading">
       <div class="visual-notes-heading">
-        <p class="section-index">04 / Marginalia</p>
+        <p class="section-index">03 / Marginalia</p>
         <h2 id="visual-notes-heading">Notes in the margin</h2>
       </div>
       <div class="figure-pair">
