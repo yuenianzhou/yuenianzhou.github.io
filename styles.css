@@ -4,6 +4,7 @@
   --font-display: "IM Fell English", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-text: "EB Garamond", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-mono: "IM Fell English SC", "Iowan Old Style", Baskerville, Georgia, serif;
+  --font-cjk: "ZCOOL XiaoWei", "Songti SC", STSong, "Noto Serif CJK SC", "Source Han Serif SC", serif;
   --ink: #24211d;
   --muted: #6b655b;
   --accent: #173d99;
@@ -416,6 +417,22 @@ summary:focus-visible {
 
 .profile-hero-prose strong {
   font-weight: 600;
+}
+
+.name-cjk-wrap {
+  white-space: nowrap;
+}
+
+.name-cjk {
+  display: inline-block;
+  font-family: var(--font-cjk);
+  font-size: 0.9em;
+  font-style: normal;
+  font-synthesis: none;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  vertical-align: -0.025em;
 }
 
 .home-hero-facts {
