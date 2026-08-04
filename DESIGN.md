@@ -39,11 +39,11 @@ typography:
     lineHeight: 1.5
     letterSpacing: "0.065em"
   cjk-name:
-    fontFamily: '"ZCOOL XiaoWei", "Songti SC", STSong, "Noto Serif CJK SC", "Source Han Serif SC", serif'
-    fontSize: "0.9em"
+    fontFamily: '"Ma Shan Zheng", "STKaiti", "Kaiti SC", KaiTi, "Noto Serif CJK SC", serif'
+    fontSize: "0.98em"
     fontWeight: 400
     lineHeight: 1
-    letterSpacing: "0.025em"
+    letterSpacing: "0.055em"
 rounded:
   square: "0"
   focus: "3px"
@@ -121,11 +121,11 @@ The palette is an aged-paper neutral system animated by one cool cobalt annotati
 **Display Font:** IM Fell English (with Iowan Old Style, Baskerville, Georgia fallbacks)  
 **Body Font:** EB Garamond (with Iowan Old Style, Baskerville, Georgia fallbacks)  
 **Label Font:** IM Fell English SC (with old-style serif fallbacks)
-**Chinese Name Font:** ZCOOL XiaoWei (with Songti and CJK serif fallbacks)
+**Chinese Name Font:** Ma Shan Zheng (with Kaiti and CJK serif fallbacks)
 
 **Character:** IM Fell English supplies irregular old-print authority for names and headings. EB Garamond keeps long mathematical and biographical prose refined, readable, and less theatrical. Small-cap labels behave like archival catalogue notes, never like a technical monospace costume.
 
-ZCOOL XiaoWei is reserved for the three Chinese characters in the personal name. Its slightly irregular printed strokes bridge the Chinese and English names without turning the line into a calligraphic logo. Load only the required glyphs, keep the face at regular weight, and do not reuse it for body copy or navigation.
+Ma Shan Zheng is reserved for the three Chinese characters in the personal name. Its controlled brush-script strokes introduce a personal signature note while the surrounding English remains firmly within the old-book system. Load only the required glyphs, keep the face at regular weight, and do not reuse it for body copy or navigation.
 
 ### Hierarchy
 
